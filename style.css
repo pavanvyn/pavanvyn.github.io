@@ -1,0 +1,520 @@
+/*fonts*/
+@font-face {
+    src: url("./fonts/Mohave.otf");
+    font-family: mohave;
+}
+@font-face {
+    src: url("./fonts/Signika.ttf");
+    font-family: signika;
+}
+
+/*body*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {  
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar-track
+{
+    background-color: black;
+}
+body::-webkit-scrollbar
+{
+    width: 1vw;
+}
+body::-webkit-scrollbar-thumb
+{
+    background-color: #999999;
+}
+body::-webkit-scrollbar-thumb:hover
+{
+    background-color: #777777;
+}
+
+span {
+    color: #ff8c1a;
+    font-weight: bold;
+}
+
+/*navbar*/
+#menubar {  
+    width: 100vw;
+    height: 5vmax;
+    background-color: #111111;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
+}
+#menubar #menuicon {
+    display: none;
+}
+#menubar ul {
+    width: auto;
+    height: 5vmax;
+    padding: 0 3vmax 0 3vmax;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;  
+}
+#menubar ul li {
+    display: flex;  
+    align-items: center;
+    justify-content: center;   
+    padding: 0 1vmax 0 1vmax;
+    height: 3vmax;
+    width: auto;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;     
+}
+#menubar ul li p {
+    font-family: mohave;
+    font-size: 2vmax;
+    padding: 1vw; 
+    color: #dddddd;   
+    cursor: pointer;
+}
+#menubar ul li#aboutMeMenu p {
+    color: #ff8c1a;
+    font-weight: bold;
+}
+#menubar ul li:hover > p {
+    color: #ff8c1a;
+}
+
+#container {
+    position: absolute;
+    left: 0;
+    top: 3vmax;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+section {
+    padding: 5vh 8vw 5vh 8vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 20vh;
+    width: 100vw;
+}
+h1.heading {
+    font-family: mohave;
+    font-size: 4vmax;
+    margin: 3.5vmax 0 2.5vmax 0;
+
+}
+ul {
+    width: 90%;
+}
+p,li {
+    font-family: signika;
+    font-size: 1.5vmax;
+    margin: 1vmax 0 1vmax 0;
+    text-align: justify;
+}
+
+/*aboutMe*/
+#aboutMe {
+    background-color: whitesmoke;
+}
+#aboutMe h1.heading {
+    color: #333333;
+}
+#self {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#Pavan {
+    width: 20vmax;
+    height: auto;
+    border-radius: 100%;
+    margin: 2vw;
+}
+#description {
+    margin: 2vw;
+    width: 50vmax;
+    height: auto;
+}
+
+/*education*/
+#education {
+    background-color: #ff8c1a;
+}
+#education h1.heading, li {
+    color: black;
+}
+#ednenvelope {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.ednlist {
+    width: 25vmax;
+    height: 25vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vmax;
+    padding: 1vmax;
+}
+.ednlist img {
+    width: 7vmax;
+    height: 7vmax;
+    margin: 1vmax;
+}
+.ednlist h3 {
+    font-family: mohave;
+    text-align: center;
+    font-size: 2vmax;
+    margin: 1vmax 0 1vmax 0;
+    color: #333333;
+}
+.ednlist h4 {
+    font-family: signika;
+    font-size: 1.6vmax;
+    margin: 0.25vmax 0 0.25vmax 0;
+    color: black;
+}
+.ednlist h5 {    
+    font-family: signika;
+    font-size: 1.4vmax;
+    margin: 0.25vmax 0 0.25vmax 0;
+    color: #444444;
+}
+
+/*projects*/
+#projects {
+    background-color: #282828;
+}
+#projects h1.heading {
+    color: #ff9933;
+}
+#pjtenvelope {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.pjtlist {
+    width: 38vmax;
+    height: 22vmax;
+    display: flex;
+    flex-direction: column;
+    margin: 2vmax;
+    padding: 2vmax;
+    background-color: #303030;
+}
+.pjtlist h3 {
+    font-family: mohave;
+    font-size: 2vmax;
+    margin: 1.5vmax 0 1.5vmax 0;
+    color: #eeeeee;
+}
+.pjtlist h4 {
+    font-family: signika;
+    font-size: 1.6vmax;
+    margin: 0.25vmax 0 0.25vmax 0;
+    color: #ff9933;
+}
+.pjtlist h5 {    
+    font-family: signika;
+    font-size: 1.4vmax;
+    margin: 0.25vmax 0 0.25vmax 0;
+    color: #888888;
+}
+.pjtlist p {
+    font-family: signika;
+    color: white;
+}
+.pjtlist p a {
+    color: #ff9933;
+}
+
+/*experience*/
+#experience {
+    background-color: whitesmoke;
+}
+#experience h1.heading {
+    color: #333333;
+}
+#expenvelope {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.explist {
+    width: 25vmax;
+    height: 30vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vmax;
+    padding: 1vmax;
+}
+.explist img {
+    width: 7vmax;
+    height: 7vmax;
+    margin: 1vmax;
+}
+.explist h3 {
+    font-family: mohave;
+    text-align: center;
+    font-size: 2vmax;
+    margin: 1vmax 0 1vmax 0;
+    color: #444444;
+}
+.explist p {    
+    font-family: signika;
+    margin: 0.25vmax 0 0.25vmax 0;
+    color: black;
+}
+
+/*activities*/
+#activities {
+    background-color: #ff8c1a;
+}
+#activities h1.heading {
+    color: black;
+}
+
+#activities ul{
+   list-style-type: none;
+}
+#activities ul li:before{
+   content: "";
+   display: inline-block;
+   height: 1.2vmax;
+   width: 1.2vmax;
+   background-size: 1.2vmax;
+   background-image: url("bullet.png");
+   margin-right: 0.5vmax;
+}
+#activities ul li  {
+    color: #222222;
+}
+
+/*contact*/
+#contact {
+    padding: 1.5vmax 5vmax 0.5vmax 5vmax;
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    width: 100vw;
+    background-color: #222222;
+}
+#contact p {
+    color: #dddddd;
+}
+#address {
+    width: auto;
+    padding: 2vmax;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#links {
+    width: auto;
+    padding: 2vmax;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#social {
+    
+}
+.socicons {
+    width: 4vmax;
+    height: 4vmax;
+    margin: 0.5vmax;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.socicons:hover {
+    opacity: 1;
+}
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 2vmax;
+    width: 100vw;
+    margin-top: 1vmax;
+}
+#footer p {
+    margin: 0;
+    padding: 0.5vmax 0 0.5vmax 0;
+    border-top: 0.1vmax solid #ff8c1a;
+    font-size: 1.2vmax;
+    color: white;
+}
+
+/*mobile mode*/
+@media screen and (orientation: portrait) {
+    /*navbar*/
+    #menubar {  
+        width: 100vw;
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        top: -100vh;
+    }
+    #menubar #menuicon {
+        position: fixed;
+        top: 2vmax;
+        left: 2vmax;
+        display: flex;
+        height: 3.5vmax;
+        width: 3.7vmax;
+        cursor: pointer;        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 15;
+    }
+    #bar1, #bar2, #bar3 {
+        margin: 0.3vmax 0vh 0.3vmax 0vh;
+        width: 3.7vmax;
+        height: 0.3vmax;
+        background-color: black;
+        border-radius: 25%;
+        -webkit-transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
+        transition: 0.2s linear;
+    }
+    .change #bar1 {
+        background-color: white;
+        margin: 0vw;
+        -webkit-transform: rotate(-45deg) translateY(0.35vmax);
+        -moz-transform: rotate(-45deg) translateY(0.35vmax);
+        -o-transform: rotate(-45deg) translateY(0.35vmax);
+        transform: rotate(-45deg) translateY(0.35vmax);
+    }
+    .change #bar2 {
+        background-color: white;
+        margin: 0vw;
+        opacity: 0;
+    }
+    .change #bar3 {
+        background-color: white;
+        margin: 0vw;
+        -webkit-transform: rotate(45deg) translateY(-0.35vmax);
+        -moz-transform: rotate(45deg) translateY(-0.35vmax);
+        -o-transform: rotate(45deg) translateY(-0.35vmax);
+        transform: rotate(45deg) translateY(-0.35vmax);
+    }
+    #menubar ul {  
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #menubar ul li {   
+        padding: 2.5vmax 0 2.5vmax 0; 
+    }
+    #menubar ul li p {   
+        font-size: 2.7vmax;  
+    }
+    #menubar.visible {
+        top: 0vh;
+    }
+    h1.heading {
+        font-size: 5vmax;
+    }
+    p,li {
+        font-size: 2vmax;
+    }
+
+    #container {
+        top: 0;
+    }
+
+    /*aboutMe*/
+    #Pavan {
+        width: 30vmax;
+    }
+
+    /*education*/
+    .ednlist {
+        width: 50vmax;
+        min-height: 27vmax;
+    }
+    .ednlist img {
+        height: 10vmax;
+        width: 10vmax;
+    }
+    .ednlist h3 {
+        font-size: 2.8vmax;
+    }
+    .ednlist h4 {
+        font-size: 2.3vmax;
+    }
+    .ednlist h5 {
+        font-size: 1.8vmax;
+    }
+
+    /*projects*/
+    .pjtlist {
+        width: 50vmax;
+        min-height: 25vmax;
+    }
+    .pjtlist h3 {
+        font-size: 2.8vmax;
+    }
+    .pjtlist h4 {
+        font-size: 2.3vmax;
+    }
+    .pjtlist h5 {
+        font-size: 1.8vmax;
+    }
+
+    /*experience*/
+    .explist {
+        width: 50vmax;
+        min-height: 25vmax;
+    }
+    .explist img {
+        height: 10vmax;
+        width: 10vmax;
+    }
+    .explist h3 {
+        font-size: 2.8vmax;
+    }
+
+    /*activities*/
+    .actlist {
+        width: 30vmax;
+    }
+
+    /*contact*/
+    #footer p {
+        font-size: 1.6vmax;
+    }
+}
