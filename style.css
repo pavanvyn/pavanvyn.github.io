@@ -298,22 +298,6 @@ p,li {
     color: black;
 }
 
-#activities ul{
-   list-style-type: none;
-}
-#activities ul li:before{
-   content: "";
-   display: inline-block;
-   height: 1.2vmax;
-   width: 1.2vmax;
-   background-size: 1.2vmax;
-   background-image: url("bullet.png");
-   margin-right: 0.5vmax;
-}
-#activities ul li  {
-    color: #222222;
-}
-
 /*contact*/
 #contact {
     padding: 1.5vmax 5vmax 0.5vmax 5vmax;
@@ -370,7 +354,6 @@ p,li {
 #footer p {
     margin: 0;
     padding: 0.5vmax 0 0.5vmax 0;
-    border-top: 0.1vmax solid #ff8c1a;
     font-size: 1.2vmax;
     color: white;
 }
