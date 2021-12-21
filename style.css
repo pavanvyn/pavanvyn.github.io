@@ -136,6 +136,9 @@ p,li {
 #aboutMe h1.heading {
     color: #333333;
 }
+#aboutMe p a {
+    color: #ff9933;
+}
 #self {
     width: 100%;
     display: flex;
@@ -246,7 +249,7 @@ p,li {
     font-family: signika;
     color: white;
 }
-.pjtlist p a {
+.pjtlist p a, .pjtlist h4 a {
     color: #ff9933;
 }
 
