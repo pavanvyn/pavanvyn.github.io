@@ -105,7 +105,7 @@ span {
     flex-direction: column;
 }
 section {
-    padding: 5vh 8vw 5vh 8vw;
+    padding: 3vh 6vw 3vh 6vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -116,7 +116,7 @@ section {
 h1.heading {
     font-family: mohave;
     font-size: 4vmax;
-    margin: 3.5vmax 0 2.5vmax 0;
+    margin: 2vmax 0 2vmax 0;
 
 }
 ul {
@@ -136,6 +136,9 @@ p,li {
 #aboutMe h1.heading {
     color: #333333;
 }
+#aboutMe smallcaps {
+	font-size: 80%;
+}
 #aboutMe p a {
     color: #ff9933;
 }
@@ -150,10 +153,10 @@ p,li {
     width: 20vmax;
     height: auto;
     border-radius: 100%;
-    margin: 2vw;
+    margin: 1vmax;
 }
 #description {
-    margin: 2vw;
+    margin: 1vmax;
     width: 50vmax;
     height: auto;
 }
@@ -173,7 +176,7 @@ p,li {
 }
 .pjtlist {
     width: 38vmax;
-    height: 22vmax;
+    height: auto;
     display: flex;
     flex-direction: column;
     margin: 2vmax;
@@ -325,16 +328,25 @@ p,li {
 
 /*contact*/
 #contact {
+    background-color: #222222;
+}
+#conenvelope {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*
     padding: 1.5vmax 5vmax 0.5vmax 5vmax;
     position: relative;
     margin: 0;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     height: auto;
-    width: 100vw;
-    background-color: #222222;
+    width: 100vw;*/
+
 }
 #contact p {
     color: #dddddd;
@@ -373,7 +385,7 @@ p,li {
     align-items: center;
     justify-content: flex-end;
     min-height: 2vmax;
-    width: 100vw;
+    width: 90vw;
     margin-top: 1vmax;
 }
 #footer p {
@@ -472,7 +484,7 @@ p,li {
     /*projects*/
     .pjtlist {
         width: 50vmax;
-        min-height: 25vmax;
+        height: auto;
     }
     .pjtlist h3 {
         font-size: 2.8vmax;

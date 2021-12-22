@@ -15,6 +15,7 @@ $(window).on("load", function() {
     var educationPos = $("#education").offset().top;
     var experiencePos = $("#experience").offset().top;
     var activitiesPos = $("#activities").offset().top;
+    var contactPos = $("#contact").offset().top;
 
 
     $(document).on("click", "#aboutMeMenu", function() {
@@ -31,6 +32,9 @@ $(window).on("load", function() {
     });
     $(document).on("click", "#activitiesMenu", function() {
         $("body, html").animate({scrollTop: activitiesPos}, 500, "swing");
+    });
+    $(document).on("click", "#contactMenu", function() {
+        $("body, html").animate({scrollTop: contactPos}, 500, "swing");
     });
 
     var halfHeight = window.innerHeight/2;
@@ -60,11 +64,17 @@ $(window).on("load", function() {
             $("#menubar ul li#experienceMenu p").css("color","#ff8c1a");
             $("#menubar ul li#experienceMenu p").css("font-weight","bold");
         }
-        else if (windowPos >= activitiesPos - halfHeight) {
+        else if (windowPos >= activitiesPos - halfHeight && windowPos < contactPos - halfHeight) {
             $("#menubar ul li").children().css("color","#dddddd");
             $("#menubar ul li").children().css("font-weight","normal");
             $("#menubar ul li#activitiesMenu p").css("color","#ff8c1a");
             $("#menubar ul li#activitiesMenu p").css("font-weight","bold");
+        }
+        else if (windowPos >= contactPos - halfHeight) {
+            $("#menubar ul li").children().css("color","#dddddd");
+            $("#menubar ul li").children().css("font-weight","normal");
+            $("#menubar ul li#contactMenu p").css("color","#ff8c1a");
+            $("#menubar ul li#contactMenu p").css("font-weight","bold");
         }
     });   
 });
