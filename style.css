@@ -544,7 +544,7 @@ p a, li a {
     .rsclist .gifbutton {
         font-size: 2.2vmax;
     }        
-    .rsclist #gifmodal #gifdisplay {
+    .rsclist #gifmodal video#gifdisplay {
         width: 80%;
     }
     .rsclist #gifcontainer .gifpanel {
