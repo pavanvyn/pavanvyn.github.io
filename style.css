@@ -587,6 +587,10 @@ p a, li a {
 
 
     /*contact*/
+    #social i.fa-brands {
+        font-size: 6vmax;
+        margin: 2vmax
+    }
     #footer p {
         font-size: 1.6vmax;
     }
