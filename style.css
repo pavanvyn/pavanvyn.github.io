@@ -228,7 +228,7 @@ p a, li a {
     overflow: auto;
     background-color: rgba(0,0,0,0.6);
 }
-.rsclist #gifmodal #gifdisplay {
+.rsclist #gifmodal video#gifdisplay {
     border: 0.2vw solid #aaaaaa;
     margin: auto;
     display: block;
@@ -269,7 +269,7 @@ p a, li a {
     margin-top: 0.5vmax;
     text-align: center;
 }
-.rsclist #gifcontainer .gifpanel img {
+.rsclist #gifcontainer .gifpanel video {
     border: 0.2vw solid #aaaaaa;
     width: 100%;
     height: auto;
