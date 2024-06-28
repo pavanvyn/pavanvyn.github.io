@@ -1,7 +1,3 @@
-$(window).on("resize", function() {
-    location.reload();
-});
-
 $(window).on("load", function() {
     //navbar toggle
     $("#closeicon").on("click", function(){
