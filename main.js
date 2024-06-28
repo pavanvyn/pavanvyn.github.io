@@ -1,80 +1,60 @@
-$(window).on('resize',function() {
+$(window).on("resize", function() {
     location.reload();
 });
 
 $(window).on("load", function() {
     //navbar toggle
-    $("#menuicon").click(function(){
-        $("#menuicon").toggleClass("change");
+    $("#closeicon").on("click", function(){
+        $("#closeicon").toggleClass("change");
         $("#menubar").toggleClass("visible");
     });
 
     //scroll and click effects
+    var menubarHeight = $("#menubar").outerHeight();
+    if ($(window).width() < $(window).height()) { // mobile portrait mode
+        menubarHeight = 0;
+    }
+
     var aboutMePos = $("#aboutMe").offset().top;
-    var projectsPos = $("#projects").offset().top;
+    var researchPos = $("#research").offset().top;
     var educationPos = $("#education").offset().top;
-    var experiencePos = $("#experience").offset().top;
+    var toolsPos = $("#tools").offset().top;
     var activitiesPos = $("#activities").offset().top;
     var contactPos = $("#contact").offset().top;
 
-
     $(document).on("click", "#aboutMeMenu", function() {
-        $("body, html").animate({scrollTop: aboutMePos}, 500, "swing");
+        $("body, html").animate({scrollTop: aboutMePos - menubarHeight}, 1000, "swing");
     });
-    $(document).on("click", "#projectsMenu", function() {
-        $("body, html").animate({scrollTop: projectsPos}, 500, "swing");
+    $(document).on("click", "#researchMenu", function() {
+        $("body, html").animate({scrollTop: researchPos - menubarHeight}, 1000, "swing");
     });
     $(document).on("click", "#educationMenu", function() {
-        $("body, html").animate({scrollTop: educationPos}, 500, "swing");
+        $("body, html").animate({scrollTop: educationPos - menubarHeight}, 1000, "swing");
     });
-    $(document).on("click", "#experienceMenu", function() {
-        $("body, html").animate({scrollTop: experiencePos}, 500, "swing");
+    $(document).on("click", "#toolsMenu", function() {
+        $("body, html").animate({scrollTop: toolsPos - menubarHeight}, 1000, "swing");
     });
     $(document).on("click", "#activitiesMenu", function() {
-        $("body, html").animate({scrollTop: activitiesPos}, 500, "swing");
+        $("body, html").animate({scrollTop: activitiesPos - menubarHeight}, 1000, "swing");
     });
     $(document).on("click", "#contactMenu", function() {
-        $("body, html").animate({scrollTop: contactPos}, 500, "swing");
+        $("body, html").animate({scrollTop: contactPos - menubarHeight}, 1000, "swing");
     });
 
-    var halfHeight = window.innerHeight/2;
-    $(window).scroll(function(){
-        var windowPos = $(window).scrollTop() + 1;
-        if (windowPos >= aboutMePos - halfHeight && windowPos < projectsPos - halfHeight) {
-            $("#menubar ul li").children().css("color","#dddddd");
-            $("#menubar ul li").children().css("font-weight","normal");
-            $("#menubar ul li#aboutMeMenu p").css("color","#ff8c1a");
-            $("#menubar ul li#aboutMeMenu p").css("font-weight","bold");
+    // microTDE gif modal
+    $(".gifbutton").on("click", function() {
+        var gifSrc = $(this).data("gif");
+        $("#gifdisplay").attr("src", gifSrc);
+        $("#gifmodal").css('display', 'flex');
+    });
+
+    $("#close").on("click", function() {
+        $("#gifmodal").hide();
+    });
+
+    $(window).on("click", function(event) {
+        if ($(event.target).is("#gifmodal")) {
+            $("#gifmodal").hide();
         }
-        else if (windowPos >= projectsPos - halfHeight && windowPos < educationPos - halfHeight) {
-            $("#menubar ul li").children().css("color","#dddddd");
-            $("#menubar ul li").children().css("font-weight","normal");
-            $("#menubar ul li#projectsMenu p").css("color","#ff8c1a");
-            $("#menubar ul li#projectsMenu p").css("font-weight","bold");
-        }
-        else if (windowPos >= educationPos - halfHeight && windowPos < experiencePos - halfHeight) {
-            $("#menubar ul li").children().css("color","#dddddd");
-            $("#menubar ul li").children().css("font-weight","normal");
-            $("#menubar ul li#educationMenu p").css("color","#ff8c1a");
-            $("#menubar ul li#educationMenu p").css("font-weight","bold");
-        }
-        else if (windowPos >= experiencePos - halfHeight && windowPos < activitiesPos - halfHeight) {
-            $("#menubar ul li").children().css("color","#dddddd");
-            $("#menubar ul li").children().css("font-weight","normal");
-            $("#menubar ul li#experienceMenu p").css("color","#ff8c1a");
-            $("#menubar ul li#experienceMenu p").css("font-weight","bold");
-        }
-        else if (windowPos >= activitiesPos - halfHeight && windowPos < contactPos - halfHeight) {
-            $("#menubar ul li").children().css("color","#dddddd");
-            $("#menubar ul li").children().css("font-weight","normal");
-            $("#menubar ul li#activitiesMenu p").css("color","#ff8c1a");
-            $("#menubar ul li#activitiesMenu p").css("font-weight","bold");
-        }
-        else if (windowPos >= contactPos - halfHeight) {
-            $("#menubar ul li").children().css("color","#dddddd");
-            $("#menubar ul li").children().css("font-weight","normal");
-            $("#menubar ul li#contactMenu p").css("color","#ff8c1a");
-            $("#menubar ul li#contactMenu p").css("font-weight","bold");
-        }
-    });   
+    });
 });

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>2+2 Quadruple stability</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="style.css"/>
+
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="main.js" defer></script> -->
+	</head>
+
+	<body>
+		<h1>Stability of 2+2 quadruple-star systems</h1>
+		
+		<form action="quadruple_2p2_stability.php" method="post">
+			<label for="qi1">Inner 1 mass ratio m2/m1:</label>
+			<input type="number" step="any" name="qi1" placeholder="1.0"/><br/>
+			
+			<label for="qi2">Inner 2 mass ratio m4/m3:</label>
+			<input type="number" step="any" name="qi2" placeholder="1.0"/><br/>
+
+			<label for="qo">Outer mass ratio (m3+m4)/(m1+m2):</label>
+			<input type="number" step="any" name="qo" placeholder="0.5"/><br/>
+			
+			<label for="ali1o">Semimajor axis in1-out ratio ai1/ao:</label>
+			<input type="number" step="any" name="ali1o" placeholder="0.2"/><br/>
+			
+			<label for="ali2o">Semimajor axis in2-out ratio ai2/ao:</label>
+			<input type="number" step="any" name="ali2o" placeholder="0.2"/><br/>
+			
+			<label for="ei1">Inner 1 eccentricity ei1:</label>
+			<input type="number" step="any" name="ei1" placeholder="0.0"/><br/>
+			
+			<label for="ei2">Inner 2 eccentricity ei2:</label>
+			<input type="number" step="any" name="ei2" placeholder="0.0"/><br/>
+			
+			<label for="eo">Outer eccentricity eo:</label>
+			<input type="number" step="any" name="eo" placeholder="0.0"/><br/>
+			
+			<label for="ii1i2">Mutual inclination in1-in2 ii1i2:</label>
+			<input type="number" step="any" name="ii1i2" placeholder="0.0"/><br/>
+			
+			<label for="ii1o">Mutual inclination in1-out ii1o:</label>
+			<input type="number" step="any" name="ii1o" placeholder="0.0"/><br/>
+			
+			<label for="ii2o">Mutual inclination in2-out ii2o:</label>
+			<input type="number" step="any" name="ii2o" placeholder="0.0"/><br/>
+
+			<input type="submit" value="Submit"/>
+		</form>
+
+	</body>
+</html>
+
+

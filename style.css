@@ -1,12 +1,6 @@
 /*fonts*/
-@font-face {
-    src: url("./fonts/Mohave.otf");
-    font-family: mohave;
-}
-@font-face {
-    src: url("./fonts/Signika.ttf");
-    font-family: signika;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto Sans Display');
+@import url('https://fonts.googleapis.com/css2?family=Noto Sans Mono');
 
 /*body*/
 * {
@@ -18,26 +12,18 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
-body::-webkit-scrollbar-track
-{
-    background-color: black;
-}
-body::-webkit-scrollbar
-{
-    width: 1vw;
-}
-body::-webkit-scrollbar-thumb
-{
-    background-color: #999999;
-}
-body::-webkit-scrollbar-thumb:hover
-{
-    background-color: #777777;
-}
 
-span {
-    color: #ff8c1a;
+span.orangetext {
+    color: darkorange;
     font-weight: bold;
+}
+span.graytext {
+    color: #aaaaaa;
+    font-weight: bold;
+}
+code {
+    font-family: Noto Sans Mono;
+    font-size: 1.2vmax;
 }
 
 /*navbar*/
@@ -52,53 +38,45 @@ span {
     top: 0;
     left: 0;
     z-index: 10;
-    -webkit-transition: 0.2s linear;
-    -moz-transition: 0.2s linear;
-    -o-transition: 0.2s linear;
     transition: 0.2s linear;
 }
-#menubar #menuicon {
+#menubar #closeicon {
     display: none;
 }
 #menubar ul {
     width: auto;
     height: 5vmax;
-    padding: 0 3vmax 0 3vmax;
+    margin-left: 2vmax;
     display: flex;
     align-items: center; 
     justify-content: flex-start;  
 }
 #menubar ul li {
-    display: flex;  
+    display: flex;
     align-items: center;
-    justify-content: center;   
-    padding: 0 1vmax 0 1vmax;
-    height: 3vmax;
-    width: auto;
-    -webkit-transition: 0.2s linear;
-    -moz-transition: 0.2s linear;
-    -o-transition: 0.2s linear;
+    justify-content: center;
+    height: 100%;
+    font-family: Noto Sans Display;
+    font-size: 1.7vmax;
+    margin: 0;
+    padding: 1vw; 
+    color: white;
+    cursor: pointer;
     transition: 0.2s linear;     
 }
-#menubar ul li p {
-    font-family: mohave;
-    font-size: 2vmax;
-    padding: 1vw; 
-    color: #dddddd;   
-    cursor: pointer;
-}
-#menubar ul li#aboutMeMenu p {
-    color: #ff8c1a;
+/* #menubar ul li#aboutMeMenu {
+    color: darkorange;
     font-weight: bold;
-}
-#menubar ul li:hover > p {
-    color: #ff8c1a;
+} */
+#menubar ul li:hover {
+    color: black;
+    background-color: darkorange;
 }
 
 #container {
     position: absolute;
     left: 0;
-    top: 3vmax;
+    top: 5vmax;
     height: auto;
     width: 100vw;
     display: flex;
@@ -114,33 +92,44 @@ section {
     width: 100vw;
 }
 h1.heading {
-    font-family: mohave;
-    font-size: 4vmax;
-    margin: 2vmax 0 2vmax 0;
-
+    font-family: Noto Sans Display;
+    font-size: 3.5vmax;
+    font-variant: small-caps;
+    margin: 1.5vmax 0 1.5vmax 0;
+    text-align: center;
+}
+h3 {
+    font-family: Noto Sans Display;
+    font-size: 1.8vmax;
+    margin: 1vmax 0 1vmax 0;
+    text-align: center;
+}
+h5 {    
+    font-family: Noto Sans Display;
+    font-size: 1.4vmax;
+    margin: 0.5vmax 0 0.5vmax 0;
+    text-align: center;
 }
 ul {
     width: 90%;
 }
-p,li {
-    font-family: signika;
-    font-size: 1.5vmax;
-    margin: 1vmax 0 1vmax 0;
+p, li {
+    font-family: Noto Sans Display;
+    font-size: 1.3vmax;
+    margin: 0.5vmax 0 0.5vmax 0;
     text-align: justify;
+}
+p a, li a {
+    color: darkorange;
 }
 
 /*aboutMe*/
 #aboutMe {
     background-color: whitesmoke;
+    
 }
 #aboutMe h1.heading {
     color: #333333;
-}
-#aboutMe smallcaps {
-	font-size: 80%;
-}
-#aboutMe p a {
-    color: #ff9933;
 }
 #self {
     width: 100%;
@@ -150,68 +139,167 @@ p,li {
     align-items: center;
 }
 #Pavan {
-    width: 20vmax;
-    height: auto;
-    border-radius: 100%;
-    margin: 1vmax;
+    width: 25vmax;
+    margin: -3vh 0 -3vh 0;
 }
 #description {
-    margin: 1vmax;
-    width: 50vmax;
+    margin: 0vmax;
+    width: 45vmax;
     height: auto;
 }
 
-/*projects*/
-#projects {
-    background-color: #282828;
+/*research*/
+#research {
+    background-color: #222222;
 }
-#projects h1.heading {
-    color: #ff9933;
+#research h1.heading {
+    color: darkorange;
 }
-#pjtenvelope {
-    width: 100%;
+#rscenvelope {
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.pjtlist {
-    width: 38vmax;
+.rsclist {
+    width: 80vmax;
     height: auto;
     display: flex;
     flex-direction: column;
     margin: 2vmax;
-    padding: 2vmax;
-    background-color: #303030;
+    padding: 2vmax 4vmax 2vmax 4vmax;
+    background-color: #333333;
 }
-.pjtlist h3 {
-    font-family: mohave;
-    font-size: 2vmax;
-    margin: 1.5vmax 0 1.5vmax 0;
-    color: #eeeeee;
+.rsclist h3 {
+    color: #dddddd;
 }
-.pjtlist h4 {
-    font-family: signika;
-    font-size: 1.6vmax;
-    margin: 0.25vmax 0 0.25vmax 0;
-    color: #ff9933;
-}
-.pjtlist h5 {    
-    font-family: signika;
-    font-size: 1.4vmax;
-    margin: 0.25vmax 0 0.25vmax 0;
-    color: #888888;
-}
-.pjtlist p {
-    font-family: signika;
+.rsclist p {
+    font-family: Noto Sans Display;
     color: white;
 }
-.pjtlist p a, .pjtlist h4 a {
-    color: #ff9933;
+.rsclist ul li {
+    font-family: Noto Sans Display;
+    color: white;
+    margin: 0.5vmax 0 0.5vmax 2vmax;
 }
+.rsclist p.centertext {
+    align-self: center;
+    margin: 0.5vmax;
+}
+.rsclist .scrolltab {
+    overflow-x: auto;
+    align-self: center;
+    width: 80%;
+    flex-grow: 1;
+}
+.rsclist .scrolltab table {
+    margin: 0.5vmax auto;
+    border-collapse: collapse;
+    width: max-content;
+}
+.rsclist .scrolltab table td, th {
+    border: 0.2vw solid #aaaaaa;
+    font-family: Noto Sans Display;
+    font-size: 1.3vmax;
+    font-weight: normal;
+    color: white;
+    padding: 0.7vmax;
+    text-align: center;
+    white-space: nowrap;
+}
+.rsclist .gifbutton {
+    background: none;
+    border: none;
+    font-family: Noto Sans Display;
+    font-size: 1.3vmax;
+    color: darkorange;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.rsclist #gifmodal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    padding-top: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+.rsclist #gifmodal #gifdisplay {
+    border: 0.2vw solid #aaaaaa;
+    margin: auto;
+    display: block;
+    width: 35%;
+    height:auto;
+}
+.rsclist #gifmodal #close {
+    position: absolute;
+    top: 2vmax;
+    right: 3vmax;
+    color: #dddddd;
+    font-size: 4vmax;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.rsclist #gifmodal #close:hover {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.rsclist #gifcontainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1vmax;
+}
+.rsclist #gifcontainer .gifpanel {
+    width: 30vmax;
+    height: auto;
+}
+.rsclist #gifcontainer .gifpanel figcaption {
+    width: auto;
+    font-family: Noto Sans Display;
+    font-size: 1.3vmax;
+    font-style: italic;
+    color: #dddddd;
+    margin-top: 0.5vmax;
+    text-align: center;
+}
+.rsclist #gifcontainer .gifpanel img {
+    border: 0.2vw solid #aaaaaa;
+    width: 100%;
+    height: auto;
+    margin-top: 0.5vmax;
+}
+.rsclist .imgshow {
+    width: 60vmax;
+    height: auto;
+    margin: 1vmax auto;
+}
+.rsclist .imgshow figcaption {
+    width: auto;
+    font-family: Noto Sans Display;
+    font-size: 1.3vmax;
+    font-style: italic;
+    color: #dddddd;
+    margin-top: 0.5vmax;
+    text-align: center;
+}
+.rsclist .imgshow img {
+    border: 0.2vw solid #aaaaaa;
+    width: 100%;
+    height: auto;
+    margin-top: 0.5vmax;
+}
+
 
 /*education*/
 #education {
-    background-color: #ff8c1a;
+    background-color: darkorange;
 }
 #education h1.heading, li {
     color: black;
@@ -223,8 +311,8 @@ p,li {
     justify-content: space-around;
 }
 .ednlist {
-    width: 25vmax;
-    height: 25vmax;
+    width: 20vmax;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,119 +325,77 @@ p,li {
     margin: 1vmax;
 }
 .ednlist h3 {
-    font-family: mohave;
-    text-align: center;
-    font-size: 2vmax;
-    margin: 1vmax 0 1vmax 0;
     color: #333333;
-}
-.ednlist h4 {
-    font-family: signika;
-    font-size: 1.6vmax;
-    margin: 0.25vmax 0 0.25vmax 0;
-    color: black;
 }
 .ednlist h5 {    
-    font-family: signika;
-    font-size: 1.4vmax;
-    margin: 0.25vmax 0 0.25vmax 0;
-    color: #444444;
-}
-
-/*experience*/
-#experience {
-    background-color: whitesmoke;
-}
-#experience h1.heading {
     color: #333333;
 }
-#expenvelope {
+
+/*tools*/
+#tools {
+    background-color: whitesmoke;
+}
+#tools h1.heading {
+    color: #333333;
+}
+#tlsenvelope {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.explist {
-    width: 40vmax;
-    height: 30vmax;
+.tlslist {
+    width: 20vmax;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1vmax;
     padding: 1vmax;
 }
-.explist img {
+.tlslist img {
     width: 6vmax;
     height: 6vmax;
     margin: 1vmax;
 }
-.explist h3 {
-    font-family: mohave;
+.tlslist h3 {
     text-align: center;
-    font-size: 2vmax;
-    margin: 1vmax 0 1vmax 0;
-    color: #444444;
+    color: #333333;
 }
-.explist p {    
-    font-family: signika;
+.tlslist p {    
+    font-family: Noto Sans Display;
     margin: 0.25vmax 0 0.25vmax 0;
     color: black;
 }
 
 /*activities*/
 #activities {
-    background-color: #ff8c1a;
+    background-color: darkorange;
 }
 #activities h1.heading {
     color: black;
 }
-#activities ul {
-    list-style-image: url('icons/activity.png');
+#activities ul li {
+    margin: 1vmax 0 1vmax 2vmax;
 }
-#activities ul {
-    list-style: none;
-}
-
-#activities li {
-    position: relative;
-    left: 2vmax;
-}
-
-#activities li:before {
-    position: absolute;
-    display: flex;
-    content: '';
-    left: -3vmax;
-    width: 2vmax;
-    height: 2vmax;
-    background-image: url('icons/activity.png');
-    background-size: 2vmax 2vmax;
+#activities ul li a {
+    color: #333333;
 }
 
 /*contact*/
 #contact {
     background-color: #222222;
+    padding-bottom: 1vh;
 }
 #conenvelope {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    /*
-    padding: 1.5vmax 5vmax 0.5vmax 5vmax;
-    position: relative;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    height: auto;
-    width: 100vw;*/
-
 }
 #contact p {
     color: #dddddd;
+    margin: 1vmax 0 1vmax 0;
 }
 #address {
     width: auto;
@@ -367,18 +413,15 @@ p,li {
     justify-content: center;
     align-items: center;
 }
-#social {
-    
-}
-.socicons {
-    width: 4vmax;
-    height: 4vmax;
-    margin: 0.5vmax;
+#social i.fa-brands {
+    font-size: 3.5vmax;
+    margin: 1vmax;
+    color: #dddddd;
     opacity: 0.7;
     cursor: pointer;
 }
-.socicons:hover {
-    opacity: 1;
+#social i.fa-brands:hover {
+    color: white;
 }
 #footer {
     display: flex;
@@ -391,7 +434,7 @@ p,li {
 #footer p {
     margin: 0;
     padding: 0.5vmax 0 0.5vmax 0;
-    font-size: 1.2vmax;
+    font-size: 1vmax;
     color: white;
 }
 
@@ -405,7 +448,7 @@ p,li {
         flex-direction: column;
         top: -100vh;
     }
-    #menubar #menuicon {
+    #menubar #closeicon {
         position: fixed;
         top: 2vmax;
         left: 2vmax;
@@ -424,17 +467,11 @@ p,li {
         height: 0.3vmax;
         background-color: black;
         border-radius: 25%;
-        -webkit-transition: 0.2s linear;
-        -moz-transition: 0.2s linear;
-        -o-transition: 0.2s linear;
         transition: 0.2s linear;
     }
     .change #bar1 {
         background-color: white;
         margin: 0vw;
-        -webkit-transform: rotate(-45deg) translateY(0.35vmax);
-        -moz-transform: rotate(-45deg) translateY(0.35vmax);
-        -o-transform: rotate(-45deg) translateY(0.35vmax);
         transform: rotate(-45deg) translateY(0.35vmax);
     }
     .change #bar2 {
@@ -445,22 +482,20 @@ p,li {
     .change #bar3 {
         background-color: white;
         margin: 0vw;
-        -webkit-transform: rotate(45deg) translateY(-0.35vmax);
-        -moz-transform: rotate(45deg) translateY(-0.35vmax);
-        -o-transform: rotate(45deg) translateY(-0.35vmax);
         transform: rotate(45deg) translateY(-0.35vmax);
     }
     #menubar ul {  
-        width: auto;
+        width: 100vw;
         height: auto;
+        margin-top: 6vmax;
         flex-direction: column;
         justify-content: center;
     }
-    #menubar ul li {   
-        padding: 2.5vmax 0 2.5vmax 0; 
-    }
-    #menubar ul li p {   
-        font-size: 2.7vmax;  
+    #menubar ul li {  
+        width: 100%; 
+        margin: 0;
+        padding: 1.5vmax 0 1.5vmax 0; 
+        font-size: 2.7vmax;
     }
     #menubar.visible {
         top: 0vh;
@@ -468,8 +503,17 @@ p,li {
     h1.heading {
         font-size: 5vmax;
     }
+    h3 {
+        font-size: 2.8vmax;
+    }
+    h5 {
+        font-size: 2.4vmax;
+    }
     p,li {
-        font-size: 2vmax;
+        font-size: 2.2vmax;
+    }
+    code {
+        font-size: 2.0vmax;
     }
 
     #container {
@@ -479,21 +523,41 @@ p,li {
     /*aboutMe*/
     #Pavan {
         width: 30vmax;
+        margin: 1vmax;
+    }
+    #description {
+        width: 75vw;
+        margin: 1vmax;
     }
 
-    /*projects*/
-    .pjtlist {
-        width: 50vmax;
+    /*research*/
+    .rsclist {
+        width: 80vw;
         height: auto;
     }
-    .pjtlist h3 {
-        font-size: 2.8vmax;
+    .rsclist .scrolltab table td, th {
+        font-size: 2.2vmax;
     }
-    .pjtlist h4 {
-        font-size: 2.3vmax;
+    .rsclist .scrolltab table td, th {
+        padding: 1vmax;
     }
-    .pjtlist h5 {
-        font-size: 1.8vmax;
+    .rsclist .gifbutton {
+        font-size: 2.2vmax;
+    }        
+    .rsclist #gifmodal #gifdisplay {
+        width: 80%;
+    }
+    .rsclist #gifcontainer .gifpanel {
+        width: 60vw;
+    }
+    .rsclist #gifcontainer .gifpanel figcaption {
+        font-size: 2.2vmax;
+    }
+    .rsclist .imgshow {
+        width: 60vw;
+    }
+    .rsclist .imgshow figcaption {
+        font-size: 2.2vmax;
     }
 
     /*education*/
@@ -505,33 +569,22 @@ p,li {
         height: 10vmax;
         width: 10vmax;
     }
-    .ednlist h3 {
-        font-size: 2.8vmax;
-    }
-    .ednlist h4 {
-        font-size: 2.3vmax;
-    }
-    .ednlist h5 {
-        font-size: 1.8vmax;
-    }
 
-    /*experience*/
-    .explist {
+    /*tools*/
+    .tlslist {
         width: 50vmax;
         min-height: 25vmax;
     }
-    .explist img {
+    .tlslist img {
         height: 10vmax;
         width: 10vmax;
     }
-    .explist h3 {
-        font-size: 2.8vmax;
+    .tlslist h3 {
+        font-size: 2.5vmax;
     }
 
     /*activities*/
-    .actlist {
-        width: 30vmax;
-    }
+
 
     /*contact*/
     #footer p {

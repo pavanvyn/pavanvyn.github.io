@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Pavan Vynatheya</title>
@@ -9,6 +10,7 @@
 
 		<link rel="icon" type="image/png" href="" width="30" height="30"/>
 		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="main.js" defer></script>
@@ -16,157 +18,325 @@
 
 	<body>
 		<nav id="menubar">
-			<div id="menuicon">
-				<span id="bar1"></span>
-				<span id="bar2"></span>
-				<span id="bar3"></span>
+			<div id="closeicon">
+				<span class="orangetext" id="bar1"></span>
+				<span class="orangetext" id="bar2"></span>
+				<span class="orangetext" id="bar3"></span>
 			</div>
 			<ul>
-				<li id="aboutMeMenu"><p>About Me</p></li>
-				<li id="projectsMenu"><p>Projects</p></li>
-				<li id="educationMenu"><p>Education</p></li>
-				<li id="experienceMenu"><p>Experience</p></li>
-				<li id="activitiesMenu"><p>Activities</p></li>
-				<li id="contactMenu"><p>Contact</p></li>	
-			</ul>ul>		
+				<li id="aboutMeMenu">About Me</li>
+				<li id="researchMenu">Research</li>
+				<li id="educationMenu">Education</li>
+				<li id="toolsMenu">Tools</li>
+				<li id="activitiesMenu">Activities</li>
+				<li id="contactMenu">Contact</li>	
+			</ul>
 		</nav>
-
 		<div id="container">			
 			<section id="aboutMe">
-				<h1 class="heading">P<smallcaps>AVAN</smallcaps> <span>V<smallcaps>YNATHEYA</smallcaps></span></h1>
+				<h1 class="heading">Pavan <span class="orangetext">Vynatheya</span></h1>
 				<div id="self">
-					<img id="Pavan" src="Pavan.jpg"></img>
+					<img id="Pavan" src="Pavan.png"></img>
 					<div id="description">
-						<p>Hi! I am <span>Pavan Vynatheya</span> (pronounced <i>Vine-a-tey-ya</i>) and I am from Bengaluru, the 3rd/4th/5th biggest city in India (depending on how you count). I speak English, Hindi, Kannada and Tamil. In 2020, I received my BS-MS Physics degree at <span><a href="https://www.iiserkol.ac.in/web/en" target="_blank">Indian Institute of Science Education and Research, Kolkata (IISER-K)</a></span>.
-						<p>I am currently a PhD candidate at the <span><a href="https://www.mpa-garching.mpg.de/" target="_blank">Max Planck Institut für Astrophysik (MPA)</a></span> at Garching, Germany in the Stellar department. I am primarily interested in the interplay between stellar evolution and <i>N</i>-body dynamics. The topics I have worked on include gravitational wave progenitors in quadruple-star systems, the dynamical stability of multiple-star systems and the tidal disruptions of stars by black holes.</p>
-						<p>(My <span><a href="Pavan_CV.pdf" target="_blank">CV</a></span> and <span><a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Vynatheya%2C%20Pavan%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">publications</a></span>)</p>
+						<p>Hi there! I am <b>Pavan Vynatheya</b> (ಪವನ್  ವೈನತೇಯ | पवन वैनतेय), pronounced as <i>Pa-va-n Vai-na-te-ya</i>, and I am from Bengaluru, India.
+							I am an Astrophysicist, with my research broadly focusing on computational stellar evolution and dynamics.
+							I am particularly interested in the evolution of binary and multiple-star systems, N-body dynamics, tidal disruption events, and stellar collisions.</p>
+						<p>In 2020, I received my BS-MS degree in Physics at <a href="https://www.iiserkol.ac.in/web/en" target="_blank">Indian Institute of Science Education and Research, Kolkata (IISER-K)</a>.
+							&nbsp;&nbsp; <a href="Pattern_speed_barred.pdf" target="_blank">[Master thesis]</a><br/>
+							In 2024, I defended my PhD degree in Astronomy at the <a href="https://www.mpa-garching.mpg.de/" target="_blank">Max Planck Institute for Astrophysics (MPA)</a>.
+							&nbsp;&nbsp; <a href="reports/Stellar_evolution_and_dynamics.pdf" target="_blank">[PhD thesis]</a></p>
+						<p>I will soon start my postdoctoral fellowship at the <a href="https://www.cita.utoronto.ca/" target="_blank">Canadian Institute for Theoretical Astrophysics (CITA), University of Toronto</a>.</p>
+						<p>(My <a href="Pavan_CV.pdf" target="_blank">CV</a> and <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Vynatheya%2C%20Pavan%22&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank">publications</a>)</p>
 					</div>
 				</div>
 			</section>
 
-			<section id="projects">
-				<h1 class="heading">PROJECTS</h1>
-				<div id="pjtenvelope">
-					<div class="pjtlist">
-						<h3>Max Planck Institut für Astrophysik, Garching, Germany</h3>
-						<h4><a href="http://taehoryu.com/" target="_blank">Dr. Taeho Ryu</a>, <a href="https://www.mpa-garching.mpg.de/person/94899/2377" target="_blank">Dr. Ruediger Pakmor</a></h4>
-						<h5>PhD project (November, 2022 - )</h5>
-						<p>Tidal disruption of stars by stellar-mass black holes <i>[ongoing]</i></p>
+			<section id="research">
+				<h1 class="heading">Research</h1>
+				<div id="rscenvelope">
+
+					<div class="rsclist">
+						<h3>Micro-tidal disruption events of stars</h3>
+						<p>The Sun is an isolated, single star that evolves in a more-or-less predictable fashion.
+							However, many stars in our Universe live in very dense stellar environments like globular clusters which impacts their lives.
+							In the cores of such clusters, the number of stars within a cubic parsec can exceed 10<sup>5</sup> (compared to nearly 1 in the Solar neighbourhood).
+							This significantly increases the chance of dynamical encounters between stars and other objects, such as black holes, in cluster cores.</p>							
+						<p>We explored these encounters between low-mass stars (like the Sun) and stellar-mass black holes, whose masses are 5-100 times that of the Sun <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...685A..45V/abstract" target="_blank">[paper]</a>.
+							To achieve this, we used the 3D hydrodynamics code <a href="https://arepo-code.org/wp-content/userguide/index.html" target="_blank"><code>AREPO</code></a> and  the 1D stellar evolution code <a href="https://docs.mesastar.org/en/release-r24.03.1/" target="_blank"><code>MESA</code></a>.
+							If the closest approach distance <i>r</i><sub>p</sub> is comparable to the star-black hole system's tidal radius <i>r</i><sub>t</sub>, the star can get tidally disrupted, with two streams of matter escaping the star on either side.
+							An even closer approach can result in the star being completely destroyed. 
+							These are called 'micro' tidal disruption events or &mu;TDEs to distingusigh them from TDEs due to supermassive black holes.
+							Studying &mu;TDEs is important because they change the remnant star's future evolution and trajectory, result in accretion of matter on to the black hole, and can thereby affect the dynamics of the host cluster.</p>
+						<p>The following tables provide animations of &mu;TDEs of stars, with masses <i>m</i><sub>&starf;</sub> and central hydrogen fractions H<sub>c</sub>, due to close approaches (characterised by <i>b</i> = <i>r</i><sub>p</sub>/<i>r</i><sub>t</sub></sub>) with black holes of masses <i>m</i><sub>BH</sub>.</p>						
+						<p class="centertext"><i>m</i><sub>BH</sub> = 10.0 M<sub>&odot;</sub></p>
+						<div class="scrolltab" style="overflow-x:auto;">
+							<table>
+								<tr>
+									<th><i>b</i> = <i>r</i><sub>p</sub>/<i>r</i><sub>t</sub></sub></th>
+									<th>0.25</th>
+									<th>0.33</th>
+									<th>0.50</th>
+									<th>0.75</th>
+									<th>1.00</th>
+									<th>1.50</th>
+									<th>2.00</th>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 0.5 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.70</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_0.25_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_0.33_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_0.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_0.75_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_1.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_1.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_0.5_b_2.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 1.0 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.00</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.25_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.33_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.50_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.75_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_1.00_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_1.50_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_2.00_Nres_500000_H_0.00.gif">[GIF]</button></td>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 1.0 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.34</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.25_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.33_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.50_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.75_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_1.00_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_1.50_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_2.00_Nres_500000_H_0.34.gif">[GIF]</button></td>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 1.0 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.70</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.25_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.33_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_0.75_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_1.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_1.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_10.0_mstar_1.0_b_2.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+								</tr>
+							</table>
+						</div>
+						<p class="centertext"><i>m</i><sub>BH</sub> = 40.0 M<sub>&odot;</sub></p>
+						<div class="scrolltab" style="overflow-x:auto;">
+							<table>
+								<tr>
+									<th><i>b</i> = <i>r</i><sub>p</sub>/<i>r</i><sub>t</sub></sub></th>
+									<th>0.25</th>
+									<th>0.33</th>
+									<th>0.50</th>
+									<th>0.75</th>
+									<th>1.00</th>
+									<th>1.50</th>
+									<th>2.00</th>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 0.5 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.70</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_0.25_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_0.33_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_0.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_0.75_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_1.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_1.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_0.5_b_2.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 1.0 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.00</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.25_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.33_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.50_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.75_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_1.00_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_1.50_Nres_500000_H_0.00.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_2.00_Nres_500000_H_0.00.gif">[GIF]</button></td>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 1.0 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.34</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.25_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.33_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.50_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.75_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_1.00_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_1.50_Nres_500000_H_0.34.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_2.00_Nres_500000_H_0.34.gif">[GIF]</button></td>
+								</tr>
+								<tr>
+									<td><i>m</i><sub>&starf;</sub> = 1.0 M<sub>&odot;</sub><br/>H<sub>c</sub> = 0.70</td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.25_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.33_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_0.75_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_1.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_1.50_Nres_500000_H_0.70.gif">[GIF]</button></td>
+									<td><button class="gifbutton" data-gif="microTDE_gifs/snapshots_mbh_40.0_mstar_1.0_b_2.00_Nres_500000_H_0.70.gif">[GIF]</button></td>
+								</tr>
+							</table>
+						</div>				
+						<div id="gifmodal">
+							<span id="close">&times;</span>
+							<img id="gifdisplay">
+						</div>
 					</div>
-					<div class="pjtlist">
-						<h3>Max Planck Institut für Astrophysik, Garching, Germany</h3>
-						<h4><a href="https://www.ashamers.com/adrian-hamers" target="_blank">Dr. Adrian Hamers</a></h4>
-						<h5>PhD project (November, 2021 - January, 2022)</h5>
-						<p>Stability of triple and quadruple-star systems <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.4146V/abstract" target="_blank">[paper1]</a> <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230109930V/abstract" target="_blank">[paper2]</a></p>
+
+					<div class="rsclist">
+						<h3>Dynamical stability of multiple-star systems</h3>
+						<p>Additional complexity in the evolution of stars can arise from the presence of companion stars.
+							The Sun is a single star and is not representative of the vast array of stellar systems that dwell in our Universe.
+							More than half of these stars, especially massive stars of masses greater than 10 times that of the Sun, have one or more companions.
+							Thus, our night sky is brimming with binaries (2 stars), triples (3 stars), quadruples (4 stars) and more.</p>							
+						<p>Binary-star systems are dynamically stable and follow closed orbits forever, at least in the regime of Newtonian dynamics and point masses.
+							When a third star is added (the famous three-body problem), the stellar orbits can become chaotic resulting in the escape of one of the stars.
+							Nevertheless, we do observe triples, quadruples and higher order multiples, implying that they can remain gravitationally bound for a very long time given a certain configuration.
+							This stable configuration is a hierarchy, where stars are arranged in 'nested' binaries. 
+							For example, a hierarchical triple comprises an 'inner' binary of two relatively close stars, and an 'outer' binary made up of a distant third star and the center of mass of the two inner stars.</p>
+						<p>Animations of hierarchical multiple-star systems are shown below. The scripts to make such animations are available on my GitHub repository <a href="https://github.com/pavanvyn/multiple-stars-animation " target="_blank">multiple-stars-animation</a>.</p>
+						<div id="gifcontainer">
+							<figure class="gifpanel">
+								<figcaption>Binary-star system</figcaption>
+								<img src="multiples_gifs/bin_10_30_80_0.25_dark.gif"/>
+							</figure>
+							<figure class="gifpanel">
+								<figcaption>Triple-star system</figcaption>
+								<img src="multiples_gifs/trip_30_10_20_15_100_0.25_0.15_dark.gif"/>
+							</figure>
+							<figure class="gifpanel">
+								<figcaption>2+2 Quadruple-star system</figcaption>
+								<img src="multiples_gifs/2p2_quad_40_20_30_10_10_10_100_0.25_0.25_0.15_dark.gif"/>
+							</figure>
+							<figure class="gifpanel">
+								<figcaption>3+1 Quadruple-star system</figcaption>
+								<img src="multiples_gifs/3p1_quad_40_10_30_20_20_80_350_0.25_0.15_0.10_dark.gif"/>
+							</figure>
+						</div>
+						<p>Using machine learning and the <i>N</i>-body code <code>MSTAR</code>, we systematically analyzed the dynamical stability and instability of triples <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.4146V/abstract" target="_blank">[paper 1]</a> and quadruples <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230109930V/abstract" target="_blank">[paper 2]</a>.
+							In the case of triples, the 6 parameters which stability depends on include the inner and outer mass rations <i>q</i><sub>in</sub> = </i>m</i><sub>2</sub>/<i>m</i><sub>1</sub> and <i>q</i><sub>out</sub> = <i>m</i><sub>3</sub>/(<i>m</i><sub>1</sub>+<i>m</i><sub>2</sub>), the semimajor axis ratio <i>&alpha;</i> = <i>a</i><sub>in</sub>/<i>a</i><sub>out</sub>, the inner and outer eccentricities <i>e</i><sub>in</sub> and <i>e</i><sub>out</sub>, and the mutual inclination <i>i</i><sub>mut</sub> between the two orbits.
+						 	We did not consider the dependence on other orbital angles.
+							Similarly, for 2+2 and 3+1 quadruples, we looked at the dependencies on 11 equaivalent parameters (three mass ratios, two semimajor axis ratios, three eccentricites and three mutual inclinations).
+							We then employed a neural network to classify triples and quadruples residing in these multi-dimensional parameter spaces as 'stable' or 'unstable'. 
+							These classifiers are freely available on my GitHub repositories <a href="https://github.com/pavanvyn/triple-stability" target="_blank">triple-stability</a> and <a href="https://github.com/pavanvyn/quadruple-stability" target="_blank">quadruple-stability</a>.</p>
+						<p><i>Future: Await web tool for interactive classification!</i></p>
 					</div>
-					<div class="pjtlist">
-						<h3>Max Planck Institut für Astrophysik, Garching, Germany</h3>
-						<h4><a href="https://www.ashamers.com/adrian-hamers" target="_blank">Dr. Adrian Hamers</a></h4>
-						<h5>PhD project (September, 2020 - October, 2021)</h5>
-						<p>Compact object mergers in quadruple-star systems <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv211014680V/abstract" target="_blank">[paper]</a></p>
+
+					<div class="rsclist">
+						<h3>Gravitational waves in quadruple-star systems</h3>
+						<p>Apart from gravitational dynamics and tides, binary-star (and higher order) systems can have matter interactions.
+							When two stars are close enough that one of the stars fills its gravitational Roche lobe, it can transfer mass onto its companion.
+							This Roche lobe overflow (RLOF) occurs either when a star expands due to stellar evolution or the orbit shrinks (or both).
+							When RLOF becomes unstable, the lost mass can surround the two stars, resulting in a common envelope (CE) evolution.
+							Illustrations of RLOF and CE are shown below.</p>
+						<figure class="imgshow">
+							<figcaption>Illustration of mass transfer in binaries</figcaption>
+							<img src="./mass-transfer.png"/>
+						</figure>
+						<p>Mass transfer enables the stars to come much closer to each other due to friction, which is crucial in the context of mergers of compact objects like neutron stars and black holes within the age of our Universe.
+							These compact object mergers cause ripples in space-time, termed gravitational waves.
+							Massive stars (with masses greater than approximately 10 times that of the Sun) are instrumental to gravitational wave emission as neutron star and black hole are the end products of their stellar evolution.
+							Finally, since massive stars are predominantly found in triples and quadruples, it is critical to study their evolution in detail.
+							Moreover, the intricate dynamics of such systems can bring stars closer together faster, potentially enhancing the number of compact object mergers.</p>
+						<p>To that end, we conducted a population synthesis study, using the code <code>MSE</code>, to estimate the occurance of such mergers in quadruple-star systems <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv211014680V/abstract" target="_blank">[paper]</a>.
+							Using <code>MSE</code> with realistic intial conditions, we evolved hundreds of thousands of 2+2 and 3+1 quadruple-star systems from birth to death.
+							We found that a small, but significant, fraction of these systems result in the formation of binary compact objects that merge within the age of our Universe.
+							In addition, we found the detectable rates of gravitational wave events from quadruple-star systems to be similar to those from binary-star systems, thereby underscoring their importance.</p>
 					</div>
-					<div class="pjtlist">
-						<h3>Inter-University Center for Astronomy and Astrophysics, Pune, India</h3>
-						<h4><a href="http://www.iucaa.in/~kanak/" target="_blank">Prof. Kanak Saha</a></h4>
-						<h5>Master thesis (October, 2019 - July, 2020)</h5>
-						<p>Pattern speed of barred galaxies <a href="Pattern_speed_barred.pdf" target="_blank">[pdf]</a> <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv210503183V/abstract" target="_blank">[paper]</a></p>
+
+					<div class="rsclist">
+						<h3>Other short projects</h3>
+						<ul>
+							<li>Comparison of real and simulated galaxies using Deep Learning <a href="reports/Real_simulated_galaxies.pdf" target="_blank">[PDF]</a></li>
+							<li>Study of low frequency Quasi-Periodic Oscillations in accreting black hole binaries<a href="reports/LFQPOs_blackhole_binary.pdf" target="_blank">[PDF]</a></li>
+							<li>Identification of Young Stellar Objects using Spitzer archive data <a href="reports/YSOs_starforming_region.pdf" target="_blank">[PDF]</a></li>
+							<li>Verification of star clusters using Colour-Magnitude Diagrams <a href="reports/Star_clusters_CMDs.pdf" target="_blank">[PDF]</a></li>
+						</ul>
 					</div>
-					<div class="pjtlist">
-						<h3>University of Western Ontario, London, Canada</h3>
-						<h4><a href="https://nearby-galaxies.github.io/" target="_blank">Prof. Pauline Barmby</a></h4>
-						<h5>Summer internship (May - August, 2019)</h5>
-						<p>Comparison of real and simulated galaxies using Deep Learning &nbsp;&nbsp;<a href="Real_simulated_galaxies.pdf" target="_blank">[pdf]</a></p>
-					</div>
-					<div class="pjtlist">
-						<h3>Osservatorio Astronomico di Brera, Merate, Italy</h3>
-						<h4><a href="http://www.tomasobelloni.it/" target="_blank">Prof. Tomaso Belloni</a></h4>
-						<h5>Summer internship (May - July, 2018)</h5>
-						<p>Study of low frequency Quasi-Periodic Oscillations in accreting black hole binaries &nbsp;&nbsp;<a href="LFQPOs_blackhole_binary.pdf" target="_blank">[pdf]</a> <a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...641A.101B/abstract" target="_blank">[paper]</a></p>
-					</div>
-					<div class="pjtlist">
-						<h3>Aryabhatta Research Institute of Observational Sciences, Nainital, India</h3>
-						<h4><a href="https://www.aries.res.in/saurabh/" target="_blank">Dr. Saurabh Sharma</a></h4>
-						<h5>Summer internship (May - July, 2017)</h5>
-						<p>Identification of Young Stellar Objects using Spitzer archive data &nbsp;&nbsp;<a href="YSOs_starforming_region.pdf" target="_blank">[pdf]</a></p>
-					</div>
-					<div class="pjtlist">
-						<h3>Indian Institute of Astrophysics, Bangalore, India</h3>
-						<h4><a href="https://www.iiap.res.in/people/personnel/purni/index.html" target="_blank">Prof. Annapurni Subramaniam</a></h4>
-						<h5>Summer internship (June - July, 2016)</h5>
-						<p>Verification of star clusters using Colour-Magnitude Diagrams &nbsp;&nbsp;<a href="Star_clusters_CMDs.pdf" target="_blank">[pdf]</a></p>
-					</div>
+					
 				</div>
 			</section>
 
 			<section id="education">
-				<h1 class="heading">EDUCATION</h1>
+				<h1 class="heading">Education</h1>
 				<div id="ednenvelope">
-				<div class="ednlist">
-						<img class="ednicon" src="icons/university.png"/>
-						<h3>Indian Institute of Science Education and Research, Kolkata, India</h3>
-						<h4>5 year BS-MS</h4>
-						<h5>(2015 - 2020)</h5>
+					<div class="ednlist">
+						<img class="ednicon" src="icons/graduation.png"/>
+						<h3>PhD in Astronomy</h3>
+						<h5>Max Planck Institute for Astrophysics, Garching, Germany<br/>(2020 - 2024)</h5>
+					</div>			
+					<div class="ednlist">
+						<img class="ednicon" src="icons/university-building.png"/>
+						<h3>BS-MS in Physics</h3>
+						<h5>Indian Institute of Science Education and Research, Kolkata, India<h5/>(2015 - 2020)</h5>
 					</div>					
 					<div class="ednlist">
-						<img class="ednicon" src="icons/high-school.png"/>
-						<h3>KLE Independent PU College, Bangalore, India</h3>
-						<h4>Classes 11-12</h4>
-						<h5>(2013 - 2015)</h5>
+						<img class="ednicon" src="icons/school.png"/>
+						<h3>Classes 11-12</h3>
+						<h5>KLE Independent PU College, Bengaluru, India<br/>(2013 - 2015)</h5>
 					</div>
 					<div class="ednlist">
 						<img class="ednicon" src="icons/school.png"/>
-						<h3>Sri Vani Public School, Bangalore, India</h3>
-						<h4>Classes 1-10</h4>
-						<h5>(2003 - 2013)</h5>
+						<h3>Classes 1-10</h3>
+						<h5>Sri Vani Public School, Bengaluru, India<br/>(2003 - 2013)</h5>
 					</div>
 				</div>
 			</section>
 
-			<section id="experience">
-				<h1 class="heading">EXPERIENCE</h1>
-				<div id="expenvelope">
-					<div class="explist">
-						<img class="expicon" src="icons/code.png"/>
-						<h3>Programming languages</h3>
-						<p>Python (including packages for image processing, data science and deep learning), C, C++, MATLAB, Mathematica</p>
+			<section id="tools">
+				<h1 class="heading">Tools</h1>
+				<div id="tlsenvelope">
+					<div class="tlslist">
+						<img class="tlsicon" src="icons/flow.png"/>
+						<h3>Hydrodrodynamics</h3>
+						<p>Moving-mesh code <code>AREPO</code></p>
 					</div>
-					<div class="explist">
-						<img class="expicon" src="icons/web-design.png"/>
-						<h3>Web development</h3>
-						<p>HTML, CSS, JavaScript (jQuery)<br/>
-						Designed websites include <span>Inquivesta 2016</span> (IISER Kolkata fest), <span>iGEM 2018 and 2019</span> (International SynBio competition), <span>Muse</span> (IISER Kolkata magazine)</p>
+					<div class="tlslist">
+						<img class="tlsicon" src="icons/gravity.png"/>
+						<h3><i>N</i>-body dynamics</h3>
+						<p><i>N</i>-body integrator <code>MSTAR</code></p>
+					</div>
+					<div class="tlslist">
+						<img class="tlsicon" src="icons/deep-learning.png"/>
+						<h3>Machine learning</h3>
+						<p><code>python</code>-based <code>scikit-learn</code>, <code>pytorch</code></p>
+					</div>
+					<div class="tlslist">
+						<img class="tlsicon" src="icons/statistics.png"/>
+						<h3>Population synthesis</h3>
+						<p>PopSyn codes <code>SSE</code>, <code>BSE</code>, <code>MSE</code></p>
 					</div>
 				</div>
 			</section>
 
 			<section id="activities">
-				<h1 class="heading">ACTIVITIES</h1>
+				<h1 class="heading">Activities</h1>
 				<ul>
-					<li>I enjoy playing racket sports - badminton and table tennis.</li>
-					<li>Lately, I have started bouldering, and I love it.</li>
-					<li>I read fantasy fiction series, with <i>Wheel of Time</i> and the <i>Cosmere</i> books being some of my favorites.</li>
-					<li>Budget travelling (currently in the EU; other places hopefully in the future).</li>
-					<li>I also play the South Indian classical flute, sometimes.</li>
+					<li>I enjoy being fit and play sports, specifically racket sports - badminton and table tennis. I hope to continue playing these two sports for a long time. Although hiking is not for me, I have come to really enjoy bouldering.</li>
+					<li>I spend a major portion of my saving to travel. Most of my current vacation travelling is in Europe, but I plan to explore other places in the future. On the top on my to-go list are countries in Southeast Asia, South America and the states of India I have not visited yet.</li>
+					<li>I read fantasy fiction series, with <i>Wheel of Time</i> and the <i>Cosmere</i> books being some of my favorites. In the past few years, I have become a victim of doomscrolling and binging TV shows, so my reading has (unfortunately) reduced quite a bit.</li>
+					<li>I used to dabble in (front-end) web design. Websites which I primarily designed include Inquivesta 2016 (IISER Kolkata fest), <a href="https://2018.igem.org/Team:IISER-Kolkata" target="_blank">iGEM 2018</a> and <a href="https://2019.igem.org/Team:IISER_Kolkata" target="_blank">iGEM 2019</a> (International SynBio competition), and <a href="https://muse.iiserkol.ac.in/" target="_blank">Muse</a> (IISER Kolkata magazine).</li>
+					<li>I also play the South Indian classical flute sometimes. During my school and university days, I performed in a few local events as well.</li>
 				</ul>
 			</section>
 
 			<section id="contact">
 				<div id="conenvelope">
 					<div id="address">
-						<p><span>Current city :</span> Munich, Germany<br/>
-							<span>Institute :</span> Max Planck Institut für Astrophysik<br/></p>
+						<p><span class="orangetext">Current city :</span> Munich, Germany<br/>
+							<span class="orangetext">Institute :</span> Max Planck Institut für Astrophysik<br/></p>
 					</div>
 					<div id="links">
 						<div id="social">
-							<a href="https://www.facebook.com/pavan.vynatheya" target="_blank"><img class="socicons" src="social/facebook.png"/></a>
-							<a href="https://twitter.com/pavanvyn" target="_blank"><img class="socicons" src="social/twitter.png"/></a>
-							<a href="https://www.instagram.com/pavanvyn" target="_blank"><img class="socicons" src="social/instagram.png"/></a>
-							<a href="https://in.linkedin.com/in/pavan-vynatheya-8a9816173" target="_blank"><img class="socicons" src="social/linkedin.png"/></a>
+							<a href="https://github.com/pavanvyn" target="_blank"><i class="fa-brands fa-github"></i></a>
+							<a href="https://in.linkedin.com/in/pavan-vynatheya-8a9816173" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+							<a href="https://www.instagram.com/pavanvyn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 						</div>
-						<p><span>email :</span> pavan.vynatheya@gmail.com</p>
+						<p><span class="orangetext">email :</span> pavan.vynatheya@gmail.com</p>
 					</div>
 				</div>
-				<div id="footer"><p><span>&#169; Pavan Vynatheya (last updated Feb 2023) - await major update!</span></p></div>
+				<div id="footer"><p><span class="orangetext">&#169; Pavan Vynatheya (last updated July 2024)</span></p></div>
 			</section>
 		</div>
 	</body>
