@@ -162,7 +162,7 @@ p a, li a {
     justify-content: space-around;
 }
 .rsclist {
-    width: 80vmax;
+    width: 90vmax;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -186,81 +186,79 @@ p a, li a {
     align-self: center;
     margin: 0.5vmax;
 }
-.rsclist .scrolltab {
-    overflow-x: auto;
-    align-self: center;
-    width: 80%;
-    flex-grow: 1;
+.rsclist #TDEcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    flex-wrap: wrap;
 }
-.rsclist .scrolltab table {
-    margin: 0.5vmax auto;
-    border-collapse: collapse;
-    width: max-content;
+.rsclist #TDEcontainer #TDEbuttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vmax;
 }
-.rsclist .scrolltab table td, th {
-    border: 0.2vw solid #aaaaaa;
-    font-family: Noto Sans Display;
-    font-size: 1.3vmax;
-    font-weight: normal;
-    color: white;
-    padding: 0.7vmax;
-    text-align: center;
-    white-space: nowrap;
+.rsclist #TDEcontainer #TDEbuttons {
+    margin: 2vmax;
 }
-.rsclist .gifbutton {
-    background: none;
+.rsclist #TDEcontainer #TDEparam {    
+    display: flex;
+}
+.rsclist #TDEcontainer h5 {
+    color: #aaaaaa;
+}
+.rsclist #TDEcontainer .TDEoption {
+    width: auto;
+    background-color: #222222;
     border: none;
     font-family: Noto Sans Display;
     font-size: 1.3vmax;
-    color: darkorange;
-    text-decoration: underline;
+    color: white;
+    margin: 0.5vmax;
+    padding: 1vmax;
     cursor: pointer;
 }
-.rsclist #gifmodal {
-    display: none;
-    position: fixed;
-    z-index: 20;
-    padding-top: 0;
-    left: 0;
-    top: 0;
+.rsclist #TDEcontainer .TDEoption:hover {
+    background-color: darkorange;
+    border: none;
+    color: black;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.rsclist #TDEcontainer .TDEoption.active {
+    background-color: darkorange;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+.rsclist #TDEcontainer .TDEoption.inactive {
+    background-color: #888888;
+    border: none;
+    color: black;
+    cursor: default;
+}
+.rsclist #TDEcontainer #TDEdisplay {
+    width: 30vmax;
+    height: 30vmax;
+    margin: 2vmax;
+}
+.rsclist #TDEcontainer #TDEdisplay video {
+    border: 0.2vw solid #aaaaaa;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
 }
-.rsclist #gifmodal video#gifdisplay {
-    border: 0.2vw solid #aaaaaa;
-    margin: auto;
-    display: block;
-    width: 35%;
-    height:auto;
-}
-.rsclist #gifmodal #close {
-    position: absolute;
-    top: 2vmax;
-    right: 3vmax;
-    color: #dddddd;
-    font-size: 4vmax;
-    font-weight: bold;
-    transition: 0.2s;
-}
-.rsclist #gifmodal #close:hover {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-.rsclist #gifcontainer {
+.rsclist #multcontainer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 1vmax;
 }
-.rsclist #gifcontainer .gifpanel {
+.rsclist #multcontainer .multpanel {
     width: 30vmax;
     height: auto;
 }
-.rsclist #gifcontainer .gifpanel figcaption {
+.rsclist #multcontainer .multpanel figcaption {
     width: auto;
     font-family: Noto Sans Display;
     font-size: 1.3vmax;
@@ -269,18 +267,24 @@ p a, li a {
     margin-top: 0.5vmax;
     text-align: center;
 }
-.rsclist #gifcontainer .gifpanel video {
+.rsclist #multcontainer .multpanel video {
     border: 0.2vw solid #aaaaaa;
     width: 100%;
     height: auto;
     margin-top: 0.5vmax;
 }
-.rsclist .imgshow {
+.rsclist .scrollcontainer {
+    overflow-x: auto;
+    align-self: center;
+    width: 80%;
+    flex-grow: 1;
+}
+.rsclist .scrollcontainer .imgshow {
     width: 60vmax;
     height: auto;
     margin: 1vmax auto;
 }
-.rsclist .imgshow figcaption {
+.rsclist .scrollcontainer .imgshow figcaption {
     width: auto;
     font-family: Noto Sans Display;
     font-size: 1.3vmax;
@@ -289,7 +293,7 @@ p a, li a {
     margin-top: 0.5vmax;
     text-align: center;
 }
-.rsclist .imgshow img {
+.rsclist .scrollcontainer .imgshow img {
     border: 0.2vw solid #aaaaaa;
     width: 100%;
     height: auto;
@@ -299,7 +303,7 @@ p a, li a {
 
 /*education*/
 #education {
-    background-color: darkorange;
+    background-color: orange;
 }
 #education h1.heading, li {
     color: black;
@@ -370,7 +374,7 @@ p a, li a {
 
 /*activities*/
 #activities {
-    background-color: darkorange;
+    background-color: orange;
 }
 #activities h1.heading {
     color: black;
@@ -532,31 +536,35 @@ p a, li a {
 
     /*research*/
     .rsclist {
-        width: 80vw;
+        width: 90vw;
         height: auto;
+        /* padding: 1vmax; */
+        background-color: #222222;
     }
-    .rsclist .scrolltab table td, th {
+    .rsclist #TDEcontainer #TDEbuttons {
+        width: 90vw;
+    }
+    .rsclist #TDEcontainer .TDEoption {
+        background-color: #333333;
         font-size: 2.2vmax;
     }
-    .rsclist .scrolltab table td, th {
-        padding: 1vmax;
+    .rsclist #TDEcontainer #TDEdisplay {
+        width: 70vw;
+        height: 70vw;
     }
-    .rsclist .gifbutton {
-        font-size: 2.2vmax;
-    }        
-    .rsclist #gifmodal #gifdisplay {
-        width: 80%;
+    .rsclist #multcontainer .multpanel {
+        width: 70vw;
     }
-    .rsclist #gifcontainer .gifpanel {
-        width: 60vw;
-    }
-    .rsclist #gifcontainer .gifpanel figcaption {
+    .rsclist #multcontainer .multpanel figcaption {
         font-size: 2.2vmax;
     }
-    .rsclist .imgshow {
-        width: 60vw;
+    .rsclist .scrollcontainer {
+        width: 100%;
     }
-    .rsclist .imgshow figcaption {
+    .rsclist .scrollcontainer .imgshow {
+        width: 150vw;
+    }
+    .rsclist .scrollcontainer .imgshow figcaption {
         font-size: 2.2vmax;
     }
 
@@ -587,6 +595,10 @@ p a, li a {
 
 
     /*contact*/
+    #social i.fa-brands {
+        font-size: 6vmax;
+        margin: 2vmax
+    }
     #footer p {
         font-size: 1.6vmax;
     }
