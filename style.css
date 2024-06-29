@@ -256,7 +256,7 @@ p a, li a {
 }
 .rsclist #multcontainer .multpanel {
     width: 30vmax;
-    height: auto;
+    height: 30vmax;
 }
 .rsclist #multcontainer .multpanel figcaption {
     width: auto;
@@ -270,7 +270,7 @@ p a, li a {
 .rsclist #multcontainer .multpanel video {
     border: 0.2vw solid #aaaaaa;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-top: 0.5vmax;
 }
 .rsclist .scrollcontainer {
@@ -552,12 +552,9 @@ p a, li a {
         width: 70vw;
         height: 70vw;
     }
-    .rsclist .gifbutton {
-        font-size: 2.2vmax;
-    }        
-    .rsclist #gifmodal video#gifdisplay {
-        width: 80%;
+    .rsclist #multcontainer .multpanel {
         width: 70vw;
+        height: 70vw;
     }
     .rsclist #multcontainer .multpanel figcaption {
         font-size: 2.2vmax;
