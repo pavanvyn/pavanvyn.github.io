@@ -39,10 +39,6 @@ $(window).on("load", function() {
 
     // microTDE animation options
     var params = { mbh: "10.0", ms: "1.0", Hc: "0.70", b: "1.00" };
-    $(".TDEparam").each(function() {
-        var param = $(this).data('param');
-        $(this).find(`[data-value="${params[param]}"]`).addClass("active");
-    });
     function adjustOptions() {
         if (params.ms == "0.5") {
             // $("[data-param='Hc'] [data-value='0.34']").hide();
@@ -74,7 +70,7 @@ $(window).on("load", function() {
             $("[data-param='ms'] [data-value='0.5']").removeClass("inactive");
         }
     }
-    $(".TDEoption").click(function() {
+    $(".TDEoption").on("click", function() {
         if (!$(this).hasClass("inactive")) {
             param = $(this).closest(".TDEparam").data("param");
             value = $(this).data("value");
@@ -85,5 +81,4 @@ $(window).on("load", function() {
             adjustOptions();
         }
     });
-    adjustOptions();
 });
