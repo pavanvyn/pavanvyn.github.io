@@ -37,20 +37,48 @@ $(window).on("load", function() {
         $("body, html").animate({scrollTop: contactPos - menubarHeight}, 1000, "swing");
     });
 
-    // microTDE gif modal
-    $(".gifbutton").on("click", function() {
-        var gifSrc = $(this).data("gif");
-        $("#gifdisplay").attr("src", gifSrc);
-        $("#gifmodal").css('display', 'flex');
-    });
-
-    $("#close").on("click", function() {
-        $("#gifmodal").hide();
-    });
-
-    $(window).on("click", function(event) {
-        if ($(event.target).is("#gifmodal")) {
-            $("#gifmodal").hide();
+    // microTDE animation options
+    var params = { mbh: "10.0", ms: "1.0", Hc: "0.70", b: "1.00" };
+    function adjustOptions() {
+        if (params.ms == "0.5") {
+            // $("[data-param='Hc'] [data-value='0.34']").hide();
+            // $("[data-param='Hc'] [data-value='0.00']").hide();
+            $("[data-param='Hc'] [data-value='0.34']").addClass("inactive");
+            $("[data-param='Hc'] [data-value='0.00']").addClass("inactive");
+            if (params.Hc == "0.34" || params.Hc == "0.00") {
+                params.Hc = "0.70";
+                $("[data-param='Hc'] [data-value='0.70']").addClass("active");
+                $("[data-param='Hc'] [data-value='0.34']").removeClass("active");
+                $("[data-param='Hc'] [data-value='0.00']").removeClass("active");
+            }
+        } else {
+            $("[data-param='Hc'] [data-value='0.34']").removeClass("inactive");
+            $("[data-param='Hc'] [data-value='0.00']").removeClass("inactive");
+            // $("[data-param='Hc'] [data-value='0.34']").show();
+            // $("[data-param='Hc'] [data-value='0.00']").show();
+        }
+        if (params.Hc == "0.34" || params.Hc == "0.00") {
+            // $("[data-param='ms'] [data-value='0.5']").hide();
+            $("[data-param='ms'] [data-value='0.5']").addClass("inactive");
+            if (params.ms == "0.5") {
+                params.ms = "1.0";
+                $("[data-param='ms'] [data-value='1.0']").addClass("active");
+                $("[data-param='ms'] [data-value='0.5']").removeClass("active");
+            }
+        } else {
+            // $("[data-param='ms'] [data-value='0.5']").show();
+            $("[data-param='ms'] [data-value='0.5']").removeClass("inactive");
+        }
+    }
+    $(".TDEoption").on("click", function() {
+        if (!$(this).hasClass("inactive")) {
+            param = $(this).closest(".TDEparam").data("param");
+            value = $(this).data("value");
+            params[param] = value;
+            $(this).siblings().removeClass("active");
+            $(this).addClass("active");
+            $("#TDEvideo").attr("src", "microTDE_mp4/snapshots_mbh_"+params.mbh+"_mstar_"+params.ms+"_b_"+params.b+"_Nres_500000_H_"+params.Hc+".mp4");
+            adjustOptions();
         }
     });
 });
