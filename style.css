@@ -552,7 +552,11 @@ p a, li a {
         width: 70vw;
         height: 70vw;
     }
-    .rsclist #multcontainer .multpanel {
+    .rsclist .gifbutton {
+        font-size: 2.2vmax;
+    }        
+    .rsclist #gifmodal video#gifdisplay {
+        width: 80%;
         width: 70vw;
     }
     .rsclist #multcontainer .multpanel figcaption {
