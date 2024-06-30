@@ -61,16 +61,17 @@ code {
     margin: 0;
     padding: 1vw; 
     color: white;
+    background-color: black;
     cursor: pointer;
     transition: 0.2s linear;     
 }
-/* #menubar ul li#aboutMeMenu {
-    color: darkorange;
-    font-weight: bold;
-} */
-#menubar ul li:hover {
+#menubar ul li.activeMenu {
     color: black;
     background-color: darkorange;
+}
+#menubar ul li:hover {
+    color: black;
+    background-color: #dddddd;
 }
 
 #container {
@@ -225,13 +226,13 @@ p a, li a {
     transition: 0.2s;
     cursor: pointer;
 }
-.rsclist #TDEcontainer .TDEoption.active {
+.rsclist #TDEcontainer .TDEoption.activeOption {
     background-color: darkorange;
     border: none;
     color: black;
     cursor: pointer;
 }
-.rsclist #TDEcontainer .TDEoption.inactive {
+.rsclist #TDEcontainer .TDEoption.inactiveOption {
     background-color: #888888;
     border: none;
     color: black;
@@ -252,7 +253,7 @@ p a, li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 1vmax;
+    margin: 1vmax 0 1vmax 0;
 }
 .rsclist #multcontainer .multpanel {
     width: 30vmax;

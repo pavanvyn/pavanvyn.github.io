@@ -24,12 +24,12 @@
 				<span class="orangetext" id="bar3"></span>
 			</div>
 			<ul>
-				<li id="aboutMeMenu">About Me</li>
-				<li id="researchMenu">Research</li>
-				<li id="educationMenu">Education</li>
-				<li id="toolsMenu">Tools</li>
-				<li id="activitiesMenu">Activities</li>
-				<li id="contactMenu">Contact</li>	
+				<li id="aboutMeMenu" class="activeMenu" data-section="aboutMe">About Me</li>
+				<li id="researchMenu" data-section="research">Research</li>
+				<li id="educationMenu" data-section="education">Education</li>
+				<li id="toolsMenu" data-section="tools">Tools</li>
+				<li id="activitiesMenu" data-section="activities">Activities</li>
+				<li id="contactMenu" data-section="contact">Contact</li>	
 			</ul>
 		</nav>
 		<div id="container">			
@@ -72,17 +72,17 @@
 							<div id="TDEbuttons">
 								<h5>Black hole mass <i>m</i><sub>BH</sub> [ M<sub>&odot;</sub> ]</h5>
 								<div class="TDEparam" data-param="mbh">
-									<button class="TDEoption active" data-value="10.0">10.0</button>
+									<button class="TDEoption activeOption" data-value="10.0">10.0</button>
 									<button class="TDEoption" data-value="40.0">40.0</button>
 								</div>
 								<h5>Star mass <i>m</i><sub>&starf;</sub> [ M<sub>&odot;</sub> ]</h5>									
 								<div class="TDEparam" data-param="ms">
 									<button class="TDEoption" data-value="0.5">0.5</button>
-									<button class="TDEoption active" data-value="1.0">1.0</button>
+									<button class="TDEoption activeOption" data-value="1.0">1.0</button>
 								</div>
 								<h5>Star core hydrogen fraction H<sub>c</sub></h5>
 								<div class="TDEparam" data-param="Hc">
-									<button class="TDEoption active" data-value="0.70">0.70</button>
+									<button class="TDEoption activeOption" data-value="0.70">0.70</button>
 									<button class="TDEoption" data-value="0.34">0.34</button>
 									<button class="TDEoption" data-value="0.00">0.00</button>
 								</div>
@@ -92,7 +92,7 @@
 									<button class="TDEoption" data-value="0.33">0.33</button>
 									<button class="TDEoption" data-value="0.50">0.50</button>
 									<button class="TDEoption" data-value="0.75">0.75</button>
-									<button class="TDEoption active" data-value="1.00">1.00</button>
+									<button class="TDEoption activeOption" data-value="1.00">1.00</button>
 									<button class="TDEoption" data-value="1.50">1.50</button>
 									<button class="TDEoption" data-value="2.00">2.00</button>
 								</div>
