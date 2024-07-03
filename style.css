@@ -3,13 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto Sans Mono');
 
 /*body*/
-html {
-    font-size: 100%;
-}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    font-size: 16px;
 }
 body {  
     overflow-y: scroll;
@@ -68,7 +68,7 @@ figcaption {
 #menubar {  
     width: 100vw;
     height: 8vh;
-    background-color: #111111;
+    background-color: black;
     display: flex;
     align-items: center; 
     justify-content: flex-start;  
@@ -192,7 +192,7 @@ section {
 }
 .rsclist #TDEcontainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;;
     flex-wrap: wrap;
 }
@@ -247,7 +247,7 @@ section {
     margin: 0.5rem;
 }
 .rsclist #TDEcontainer #TDEdisplay video {
-    border: 0.2vw solid #aaaaaa;
+    border: 0.1rem solid #aaaaaa;
     width: 100%;
     height: 100%;
 }
@@ -266,7 +266,7 @@ section {
     color: #dddddd;
 }
 .rsclist #multcontainer .multpanel video {
-    border: 0.2vw solid #aaaaaa;
+    border: 0.1rem solid #aaaaaa;
     width: 100%;
     height: auto;
     margin-top: 0.5rem;
@@ -274,11 +274,11 @@ section {
 .rsclist .scrollcontainer {
     overflow-x: auto;
     align-self: center;
-    width: 80%;
+    width: 60vw;
     flex-grow: 1;
 }
 .rsclist .scrollcontainer .imgshow {
-    width: 60vw;
+    width: 100%;
     height: auto;
     margin: 0.5rem auto;
 }
@@ -286,7 +286,7 @@ section {
     color: #dddddd;
 }
 .rsclist .scrollcontainer .imgshow img {
-    border: 0.2vw solid #aaaaaa;
+    border: 0.1rem solid #aaaaaa;
     width: 100%;
     height: auto;
     margin-top: 0.5rem;
@@ -301,7 +301,7 @@ section {
     color: black;
 }
 #ednenvelope {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -335,7 +335,7 @@ section {
     color: #333333;
 }
 #tlsenvelope {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -383,7 +383,7 @@ section {
     padding-bottom: 1vh;
 }
 #conenvelope {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -396,8 +396,6 @@ section {
     width: auto;
     height: auto;
     padding: 1rem;
-    display: flex;
-    justify-content: center;
 }
 #links {
     width: auto;
@@ -405,7 +403,6 @@ section {
     height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 #social i.fa-brands {
@@ -432,23 +429,23 @@ section {
     color: white;
 }
 
-@media (min-width: 1600px) {
-    /* body {
+/* @media (min-width: 1600px) {
+    body {
         transform: scale(0.8);
         transform-origin: center;
         background-color: #333333;
-    } */
-    img, video {
-        transform: scale(0.8); /* Scale down to 80% */
-        transform-origin: top center; /* Keep the center of the element in place */
     }
-  }
+} */
 
 /*mobile mode*/
 @media screen and (orientation: portrait) {
     html {
-        font-size: 120%;
+        font-size: 100%;
     }
+    section {
+        padding: 1rem 1.5rem 1rem 1.5rem;
+    }
+
     /*navbar*/
     #menubar {  
         width: 100vw;
@@ -475,7 +472,6 @@ section {
         width: 3.7vh;
         height: 0.3vh;
         background-color: black;
-        border-radius: 25%;
         transition: 0.2s linear;
     }
     .change #bar1 {
@@ -514,21 +510,21 @@ section {
 
     /*aboutMe*/
     #Pavan {
-        width: 50vw;
+        width: 60vw;
         margin: 0.5rem;
     }
     #description {
-        width: 75vw;
+        width: 80vw;
         margin: 0.5rem;
     }
 
     /*research*/
     .rsclist {
-        width: 90vw;
+        width: 80vw;
         height: auto;
         background-color: #222222;
-        margin: 0.5rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+        padding: 0;
     }
     .rsclist #TDEcontainer #TDEbuttons {
         width: 90vw;
@@ -552,7 +548,7 @@ section {
 
     /*education*/
     .ednlist {
-        width: 75vw;
+        width: 80vw;
         height: auto;
     }
     .ednlist img.ednicon {
@@ -562,7 +558,7 @@ section {
 
     /*tools*/
     .tlslist {
-        width: 75vw;
+        width: 80vw;
         height: auto;
     }
     .tlslist img.tlsicon {
@@ -571,6 +567,9 @@ section {
     }
 
     /*activities*/
+    #activities ul {
+        width: 80vw;
+    }
 
 
     /*contact*/
