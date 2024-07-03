@@ -134,7 +134,6 @@ section {
 /*aboutMe*/
 #aboutMe {
     background-color: whitesmoke;
-    
 }
 #aboutMe h1.heading {
     color: #333333;
@@ -391,6 +390,7 @@ section {
 }
 #contact p {
     color: #dddddd;
+    text-align: center;
 }
 #address {
     width: auto;
@@ -421,7 +421,7 @@ section {
     justify-content: flex-end;
     min-height: 4vh;
     width: 90vw;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 #footer p {
     margin: 0;
@@ -440,7 +440,7 @@ section {
 /*mobile mode*/
 @media screen and (orientation: portrait) {
     html {
-        font-size: 100%;
+        font-size: 120%;
     }
     section {
         padding: 1rem 1.5rem 1rem 1.5rem;
@@ -492,7 +492,7 @@ section {
     #menubar ul {  
         width: 100vw;
         height: auto;
-        margin-top: 3rem;
+        margin: 4rem 0 0 0;
         flex-direction: column;
         justify-content: center;
     }
@@ -501,7 +501,7 @@ section {
         padding: 1rem 0 1rem 0;
     }
     #menubar.visible {
-        top: 0vh;
+        top: 0;
     }
 
     #container {
@@ -509,6 +509,9 @@ section {
     }
 
     /*aboutMe*/
+    #aboutMe {
+        padding-top: 3rem;
+    }
     #Pavan {
         width: 60vw;
         margin: 0.5rem;
@@ -533,11 +536,11 @@ section {
         background-color: #333333;
     }
     .rsclist #TDEcontainer #TDEdisplay {
-        width: 70vw;
-        height: 70vw;
+        width: 80vw;
+        height: 80vw;
     }
     .rsclist #multcontainer .multpanel {
-        width: 70vw;
+        width: 80vw;
     }
     .rsclist .scrollcontainer {
         width: 100%;
