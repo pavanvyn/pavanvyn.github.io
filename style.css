@@ -433,9 +433,6 @@ section {
 }
 
 @media (min-width: 1600px) {
-    html {
-        font-size: 80%;
-    }
     /* body {
       transform: scale(0.8);
       transform-origin: center;
