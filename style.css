@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto Sans Mono');
 
 /*body*/
+html {
+    font-size: 100%;
+}
 * {
     margin: 0;
     padding: 0;
@@ -21,15 +24,50 @@ span.graytext {
     color: #aaaaaa;
     font-weight: bold;
 }
+h1.heading {
+    font-family: Noto Sans Display;
+    font-size: 2.5rem;
+    font-variant: small-caps;
+    margin: 1rem 0 1rem 0;
+    text-align: center;
+}
+h3 {
+    font-family: Noto Sans Display;
+    font-size: 1.5rem;
+    margin: 0.75rem 0 0.75rem 0;
+    text-align: center;
+}
+h5 {    
+    font-family: Noto Sans Display;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    text-align: center;
+}
+p, li {
+    font-family: Noto Sans Display;
+    font-size: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    text-align: justify;
+}
+p a, li a {
+    color: darkorange;
+}
 code {
     font-family: Noto Sans Mono;
-    font-size: 1.2vmax;
+    font-size: 0.9rem;
+}
+figcaption {
+    font-family: Noto Sans Display;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    text-align: center;
 }
 
 /*navbar*/
 #menubar {  
     width: 100vw;
-    height: 5vmax;
+    height: 8vh;
     background-color: #111111;
     display: flex;
     align-items: center; 
@@ -45,8 +83,8 @@ code {
 }
 #menubar ul {
     width: auto;
-    height: 5vmax;
-    margin-left: 2vmax;
+    height: 8vh;
+    margin-left: 2rem;
     display: flex;
     align-items: center; 
     justify-content: flex-start;  
@@ -57,9 +95,9 @@ code {
     justify-content: center;
     height: 100%;
     font-family: Noto Sans Display;
-    font-size: 1.7vmax;
+    font-size: 1.2rem;
     margin: 0;
-    padding: 1vw; 
+    padding: 1rem; 
     color: white;
     background-color: black;
     cursor: pointer;
@@ -77,51 +115,20 @@ code {
 #container {
     position: absolute;
     left: 0;
-    top: 5vmax;
+    top: 8vh;
     height: auto;
     width: 100vw;
     display: flex;
     flex-direction: column;
 }
 section {
-    padding: 3vh 6vw 3vh 6vw;
+    padding: 2rem 4rem 2rem 4rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 20vh;
     width: 100vw;
-}
-h1.heading {
-    font-family: Noto Sans Display;
-    font-size: 3.5vmax;
-    font-variant: small-caps;
-    margin: 1.5vmax 0 1.5vmax 0;
-    text-align: center;
-}
-h3 {
-    font-family: Noto Sans Display;
-    font-size: 1.8vmax;
-    margin: 1vmax 0 1vmax 0;
-    text-align: center;
-}
-h5 {    
-    font-family: Noto Sans Display;
-    font-size: 1.4vmax;
-    margin: 0.5vmax 0 0.5vmax 0;
-    text-align: center;
-}
-ul {
-    width: 90%;
-}
-p, li {
-    font-family: Noto Sans Display;
-    font-size: 1.3vmax;
-    margin: 0.5vmax 0 0.5vmax 0;
-    text-align: justify;
-}
-p a, li a {
-    color: darkorange;
 }
 
 /*aboutMe*/
@@ -140,12 +147,12 @@ p a, li a {
     align-items: center;
 }
 #Pavan {
-    width: 25vmax;
-    margin: -3vh 0 -3vh 0;
+    width: 25vw;
+    margin: -2rem 0 -2rem 0;
 }
 #description {
-    margin: 0vmax;
-    width: 45vmax;
+    margin: 0;
+    width: 45vw;
     height: auto;
 }
 
@@ -163,12 +170,12 @@ p a, li a {
     justify-content: space-around;
 }
 .rsclist {
-    width: 90vmax;
+    width: 90vw;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 2vmax;
-    padding: 2vmax 4vmax 2vmax 4vmax;
+    margin: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
     background-color: #333333;
 }
 .rsclist h3 {
@@ -181,11 +188,7 @@ p a, li a {
 .rsclist ul li {
     font-family: Noto Sans Display;
     color: white;
-    margin: 0.5vmax 0 0.5vmax 2vmax;
-}
-.rsclist p.centertext {
-    align-self: center;
-    margin: 0.5vmax;
+    margin-left: 2rem;
 }
 .rsclist #TDEcontainer {
     display: flex;
@@ -197,10 +200,10 @@ p a, li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40vmax;
+    width: 35vw;
 }
 .rsclist #TDEcontainer #TDEbuttons {
-    margin: 2vmax;
+    margin: 0.5rem;
 }
 .rsclist #TDEcontainer #TDEparam {    
     display: flex;
@@ -213,10 +216,10 @@ p a, li a {
     background-color: #222222;
     border: none;
     font-family: Noto Sans Display;
-    font-size: 1.3vmax;
+    font-size: 1rem;
     color: white;
-    margin: 0.5vmax;
-    padding: 1vmax;
+    margin: 0.2rem;
+    padding: 0.5rem;
     cursor: pointer;
 }
 .rsclist #TDEcontainer .TDEoption:hover {
@@ -239,9 +242,9 @@ p a, li a {
     cursor: default;
 }
 .rsclist #TDEcontainer #TDEdisplay {
-    width: 30vmax;
-    height: 30vmax;
-    margin: 2vmax;
+    width: 35vw;
+    height: 35vw;
+    margin: 0.5rem;
 }
 .rsclist #TDEcontainer #TDEdisplay video {
     border: 0.2vw solid #aaaaaa;
@@ -253,26 +256,20 @@ p a, li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 1vmax 0 1vmax 0;
+    margin: 0.5rem 0 0.5rem 0;
 }
 .rsclist #multcontainer .multpanel {
-    width: 30vmax;
+    width: 35vw;
     height: auto;
 }
 .rsclist #multcontainer .multpanel figcaption {
-    width: auto;
-    font-family: Noto Sans Display;
-    font-size: 1.3vmax;
-    font-style: italic;
     color: #dddddd;
-    margin-top: 0.5vmax;
-    text-align: center;
 }
 .rsclist #multcontainer .multpanel video {
     border: 0.2vw solid #aaaaaa;
     width: 100%;
     height: auto;
-    margin-top: 0.5vmax;
+    margin-top: 0.5rem;
 }
 .rsclist .scrollcontainer {
     overflow-x: auto;
@@ -281,24 +278,18 @@ p a, li a {
     flex-grow: 1;
 }
 .rsclist .scrollcontainer .imgshow {
-    width: 60vmax;
+    width: 60vw;
     height: auto;
-    margin: 1vmax auto;
+    margin: 0.5rem auto;
 }
 .rsclist .scrollcontainer .imgshow figcaption {
-    width: auto;
-    font-family: Noto Sans Display;
-    font-size: 1.3vmax;
-    font-style: italic;
     color: #dddddd;
-    margin-top: 0.5vmax;
-    text-align: center;
 }
 .rsclist .scrollcontainer .imgshow img {
     border: 0.2vw solid #aaaaaa;
     width: 100%;
     height: auto;
-    margin-top: 0.5vmax;
+    margin-top: 0.5rem;
 }
 
 
@@ -316,18 +307,18 @@ p a, li a {
     justify-content: space-around;
 }
 .ednlist {
-    width: 20vmax;
+    width: 20vw;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1vmax;
-    padding: 1vmax;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
-.ednlist img {
-    width: 6vmax;
-    height: 6vmax;
-    margin: 1vmax;
+.ednlist img.ednicon {
+    width: 6vw;
+    height: 6vw;
+    margin: 0.5rem;
 }
 .ednlist h3 {
     color: #333333;
@@ -350,18 +341,18 @@ p a, li a {
     justify-content: space-around;
 }
 .tlslist {
-    width: 20vmax;
+    width: 20vw;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1vmax;
-    padding: 1vmax;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
-.tlslist img {
-    width: 6vmax;
-    height: 6vmax;
-    margin: 1vmax;
+.tlslist img.tlsicon {
+    width: 6vw;
+    height: 6vw;
+    margin: 0.5rem;
 }
 .tlslist h3 {
     text-align: center;
@@ -369,7 +360,6 @@ p a, li a {
 }
 .tlslist p {    
     font-family: Noto Sans Display;
-    margin: 0.25vmax 0 0.25vmax 0;
     color: black;
 }
 
@@ -381,7 +371,7 @@ p a, li a {
     color: black;
 }
 #activities ul li {
-    margin: 1vmax 0 1vmax 2vmax;
+    margin-left: 2rem;
 }
 #activities ul li a {
     color: #333333;
@@ -397,21 +387,21 @@ p a, li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 #contact p {
     color: #dddddd;
-    margin: 1vmax 0 1vmax 0;
 }
 #address {
     width: auto;
-    padding: 2vmax;
     height: auto;
+    padding: 1rem;
     display: flex;
     justify-content: center;
 }
 #links {
     width: auto;
-    padding: 2vmax;
+    padding: 1rem;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -419,8 +409,8 @@ p a, li a {
     align-items: center;
 }
 #social i.fa-brands {
-    font-size: 3.5vmax;
-    margin: 1vmax;
+    font-size: 2.5rem;
+    margin: 0.7rem;
     color: #dddddd;
     opacity: 0.7;
     cursor: pointer;
@@ -432,19 +422,32 @@ p a, li a {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    min-height: 2vmax;
+    min-height: 4vh;
     width: 90vw;
-    margin-top: 1vmax;
+    margin-top: 1rem;
 }
 #footer p {
     margin: 0;
-    padding: 0.5vmax 0 0.5vmax 0;
-    font-size: 1vmax;
+    font-size: 0.8rem;
     color: white;
 }
 
+@media (min-width: 1600px) {
+    html {
+        font-size: 80%;
+    }
+    /* body {
+      transform: scale(0.8);
+      transform-origin: center;
+      background-color: #333333;
+    } */
+  }
+
 /*mobile mode*/
 @media screen and (orientation: portrait) {
+    html {
+        font-size: 120%;
+    }
     /*navbar*/
     #menubar {  
         width: 100vw;
@@ -455,11 +458,11 @@ p a, li a {
     }
     #menubar #closeicon {
         position: fixed;
-        top: 2vmax;
-        left: 2vmax;
+        top: 2vh;
+        left: 2vh;
         display: flex;
-        height: 3.5vmax;
-        width: 3.7vmax;
+        height: 3.5vh;
+        width: 3.7vh;
         cursor: pointer;        
         flex-direction: column;
         align-items: center;
@@ -467,58 +470,41 @@ p a, li a {
         z-index: 15;
     }
     #bar1, #bar2, #bar3 {
-        margin: 0.3vmax 0vh 0.3vmax 0vh;
-        width: 3.7vmax;
-        height: 0.3vmax;
+        margin: 0.3vh 0 0.3vh 0;
+        width: 3.7vh;
+        height: 0.3vh;
         background-color: black;
         border-radius: 25%;
         transition: 0.2s linear;
     }
     .change #bar1 {
         background-color: white;
-        margin: 0vw;
-        transform: rotate(-45deg) translateY(0.35vmax);
+        margin: 0;
+        transform: rotate(-45deg) translateY(0.35vh);
     }
     .change #bar2 {
         background-color: white;
-        margin: 0vw;
+        margin: 0;
         opacity: 0;
     }
     .change #bar3 {
         background-color: white;
-        margin: 0vw;
-        transform: rotate(45deg) translateY(-0.35vmax);
+        margin: 0;
+        transform: rotate(45deg) translateY(-0.35vh);
     }
     #menubar ul {  
         width: 100vw;
         height: auto;
-        margin-top: 6vmax;
+        margin-top: 3rem;
         flex-direction: column;
         justify-content: center;
     }
     #menubar ul li {  
-        width: 100%; 
-        margin: 0;
-        padding: 1.5vmax 0 1.5vmax 0; 
-        font-size: 2.7vmax;
+        width: 100%;
+        padding: 1rem 0 1rem 0;
     }
     #menubar.visible {
         top: 0vh;
-    }
-    h1.heading {
-        font-size: 5vmax;
-    }
-    h3 {
-        font-size: 2.8vmax;
-    }
-    h5 {
-        font-size: 2.4vmax;
-    }
-    p,li {
-        font-size: 2.2vmax;
-    }
-    code {
-        font-size: 2.0vmax;
     }
 
     #container {
@@ -527,27 +513,27 @@ p a, li a {
 
     /*aboutMe*/
     #Pavan {
-        width: 30vmax;
-        margin: 1vmax;
+        width: 50vw;
+        margin: 0.5rem;
     }
     #description {
         width: 75vw;
-        margin: 1vmax;
+        margin: 0.5rem;
     }
 
     /*research*/
     .rsclist {
         width: 90vw;
         height: auto;
-        /* padding: 1vmax; */
         background-color: #222222;
+        margin: 0.5rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
     }
     .rsclist #TDEcontainer #TDEbuttons {
         width: 90vw;
     }
     .rsclist #TDEcontainer .TDEoption {
         background-color: #333333;
-        font-size: 2.2vmax;
     }
     .rsclist #TDEcontainer #TDEdisplay {
         width: 70vw;
@@ -556,51 +542,35 @@ p a, li a {
     .rsclist #multcontainer .multpanel {
         width: 70vw;
     }
-    .rsclist #multcontainer .multpanel figcaption {
-        font-size: 2.2vmax;
-    }
     .rsclist .scrollcontainer {
         width: 100%;
     }
     .rsclist .scrollcontainer .imgshow {
         width: 150vw;
     }
-    .rsclist .scrollcontainer .imgshow figcaption {
-        font-size: 2.2vmax;
-    }
 
     /*education*/
     .ednlist {
-        width: 50vmax;
-        min-height: 27vmax;
+        width: 75vw;
+        height: auto;
     }
-    .ednlist img {
-        height: 10vmax;
-        width: 10vmax;
+    .ednlist img.ednicon {
+        width: 15vw;
+        height: 15vw;
     }
 
     /*tools*/
     .tlslist {
-        width: 50vmax;
-        min-height: 25vmax;
+        width: 75vw;
+        height: auto;
     }
-    .tlslist img {
-        height: 10vmax;
-        width: 10vmax;
-    }
-    .tlslist h3 {
-        font-size: 2.5vmax;
+    .tlslist img.tlsicon {
+        width: 15vw;
+        height: 15vw;
     }
 
     /*activities*/
 
 
     /*contact*/
-    #social i.fa-brands {
-        font-size: 6vmax;
-        margin: 2vmax
-    }
-    #footer p {
-        font-size: 1.6vmax;
-    }
 }
