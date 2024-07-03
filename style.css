@@ -4,8 +4,7 @@
 
 /*body*/
 html {
-    /* font-size: 100%; */
-    font-size: 16px;
+    font-size: 100%;
 }
 * {
     margin: 0;
@@ -441,7 +440,7 @@ section {
     } */
     img, video {
         transform: scale(0.8); /* Scale down to 80% */
-        transform-origin: center; /* Keep the center of the element in place */
+        transform-origin: top center; /* Keep the center of the element in place */
     }
   }
 
