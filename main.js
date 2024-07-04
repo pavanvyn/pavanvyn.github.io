@@ -16,39 +16,26 @@ $(window).on("load", function() {
         $("body, html").animate({scrollTop: sectionPos - menubarHeight}, 1000, "swing");
     });
 
-    var quarterHeight = window.innerHeight/4;
+    var sections = $("section");
+    var menulists = $("#menubar ul li");
+    var halfHeight = $(window).height()/2;
     $(window).on("scroll", function() {
-        var windowPos = $(window).scrollTop() + 1;
-        var aboutMePos = $("#aboutMe").offset().top;
-        var researchPos = $("#research").offset().top;
-        var educationPos = $("#education").offset().top;
-        var toolsPos = $("#tools").offset().top;
-        var activitiesPos = $("#activities").offset().top;
-        var contactPos = $("#contact").offset().top;
-        if (windowPos >= aboutMePos - quarterHeight && windowPos < researchPos - quarterHeight) {
-            $("#menubar ul li#aboutMeMenu").siblings().removeClass("activeMenu");
-            $("#menubar ul li#aboutMeMenu").addClass("activeMenu");
-        }
-        else if (windowPos >= researchPos - quarterHeight && windowPos < educationPos - quarterHeight) {
-            $("#menubar ul li#researchMenu").siblings().removeClass("activeMenu");
-            $("#menubar ul li#researchMenu").addClass("activeMenu");
-        }
-        else if (windowPos >= educationPos - quarterHeight && windowPos < toolsPos - quarterHeight) {
-            $("#menubar ul li#educationMenu").siblings().removeClass("activeMenu");
-            $("#menubar ul li#educationMenu").addClass("activeMenu");
-        }
-        else if (windowPos >= toolsPos - quarterHeight && windowPos < activitiesPos - quarterHeight) {
-            $("#menubar ul li#toolsMenu").siblings().removeClass("activeMenu");
-            $("#menubar ul li#toolsMenu").addClass("activeMenu");
-        }
-        else if (windowPos >= activitiesPos - quarterHeight && windowPos < contactPos - quarterHeight) {
-            $("#menubar ul li#activitiesMenu").siblings().removeClass("activeMenu");
-            $("#menubar ul li#activitiesMenu").addClass("activeMenu");
-        }
-        else if (windowPos >= contactPos - quarterHeight) {
-            $("#menubar ul li#contactMenu").siblings().removeClass("activeMenu");
-            $("#menubar ul li#contactMenu").addClass("activeMenu");
-        }
+        var windowPos = $(window).scrollTop();      
+        sections.each(function(index) {
+            var sectionPos = $(this).offset().top;
+            var nextSectionPos = sections.eq(index+1).offset().top;            
+            if (index < sections.length-1) {
+                if (windowPos >= sectionPos - halfHeight && windowPos < nextSectionPos - halfHeight) {
+                    menulists.removeClass("activeMenu");
+                    menulists.eq(index).addClass("activeMenu");
+                }
+            } else {
+                if (windowPos >= sectionPos - halfHeight) {
+                    menulists.removeClass("activeMenu");
+                    menulists.eq(index).addClass("activeMenu");
+                }
+            }
+        });
     });
 
     // microTDE animation options
