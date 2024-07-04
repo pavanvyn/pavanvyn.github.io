@@ -1,11 +1,17 @@
 $(window).on("load", function() {
-    //navbar toggle
+    // navbar close icon toggle
     $("#closeicon").on("click", function(){
         $("#closeicon").toggleClass("change");
         $("#menubar").toggleClass("visible");
     });
+    if ($(window).width() < $(window).height()) { // mobile portrait mode
+        $("#menubar ul li").on("click", function(){
+            $("#closeicon").toggleClass("change");
+            $("#menubar").toggleClass("visible");
+        });
+    }
 
-    //scroll and click effects
+    // navbar click effect
     $("#menubar ul li").on("click", function() {
         var section= $(this).data("section");
         var menubarHeight = $("#menubar").outerHeight();
@@ -16,15 +22,18 @@ $(window).on("load", function() {
         $("body, html").animate({scrollTop: sectionPos - menubarHeight}, 1000, "swing");
     });
 
+    // window scroll effect
     var sections = $("section");
     var menulists = $("#menubar ul li");
     var halfHeight = $(window).height()/2;
     $(window).on("scroll", function() {
         var windowPos = $(window).scrollTop();      
         sections.each(function(index) {
-            var sectionPos = $(this).offset().top;
-            var nextSectionPos = sections.eq(index+1).offset().top;            
+            var section = $(this)
+            var sectionPos = section.offset().top;
             if (index < sections.length-1) {
+                var nextSection = sections.eq(index+1)
+                var nextSectionPos = nextSection.offset().top;
                 if (windowPos >= sectionPos - halfHeight && windowPos < nextSectionPos - halfHeight) {
                     menulists.removeClass("activeMenu");
                     menulists.eq(index).addClass("activeMenu");
