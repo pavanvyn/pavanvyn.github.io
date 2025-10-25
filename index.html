@@ -57,33 +57,71 @@
 				<div id="rscenvelope">
 
 					<div class="rsclist">
+						<h3>Collisions and mergers of stars</h3>
+						<p>Many stars in our Universe, unlike our Sun, live in very dense stellar environments like star clusters which alters their lives.
+							This significantly increases the chance of dynamical encounters between stars, leadinf to collisions.
+							Additionally, stars in binary systems can also merge over the course of their evolution due to radial expansion, tides and orbit changes.</p>								
+						<p>Studying collisions and mergers is important because they are potential formation channels for blue straggler stars and highly magnetized stars.
+							We explored the physical differences between collision and merger products of massive main-sequence stars <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251013736V/abstract" target="_blank">[paper]</a>.
+							To achieve this, we used the 3D magnetohydrodynamics code <a href="https://arepo-code.org/wp-content/userguide/index.html" target="_blank"><code>AREPO</code></a> and the 1D stellar evolution code <a href="https://docs.mesastar.org/en/release-r24.03.1/" target="_blank"><code>MESA</code></a>.
+							We found that both collisions and mergers lead to chemical mixing and significant amplification of the magnetic field strength, although merger products have potentially longer-lived fields.
+							Furthermore, merger products show magnetized bipolar outflows while collision products do not.</p>
+						<p>The following interactive buttons provide animations of collisions and mergers of main-sequence stars of different masses.</p>
+						<p><i>Note:</i> For collisions, we ran two simulations with a larger impact parameter <i>b</i> = <i>r</i><sub>p</sub>/<i>r</i><sub>tot</sub>, where <i>r</i><sub>p</sub> is the closest approach distance and <i>r</i><sub>tot</sub></i> is the sum of the two stellar radii.</p>
+						<div id="collmercontainer">
+							<div id="collmerbuttons">
+								<h5>Interaction type</h5>
+								<div class="collmerparam" data-param="type">
+									<button class="collmeroption activecollmeroption" data-value="Collision: b = 0.25">Collision: <i>b</i> = 0.25</button>
+									<button class="collmeroption" data-value="Collision: b = 0.50">Collision: <i>b</i> = 0.50</button>
+									<button class="collmeroption" data-value="Merger">Merger</button>
+								</div>
+								<h5>Star masses <i>m</i><sub>&starf;,1</sub> [ M<sub>&odot;</sub> ] and <i>m</i><sub>&starf;,2</sub> [ M<sub>&odot;</sub> ]</h5>									
+								<div class="collmerparam" data-param="ms1ms2">
+									<button class="collmeroption" data-value="10 + 8">10 + 8</button>
+									<button class="collmeroption" data-value="10 + 7">10 + 7</button>
+									<button class="collmeroption activecollmeroption" data-value="10 + 5">10 + 5</button>
+									<button class="collmeroption" data-value="8 + 7">8 + 7</button>
+									<button class="collmeroption" data-value="8 + 5">8 + 5</button>
+									<button class="collmeroption" data-value="7 + 5">7 + 5</button>
+								</div>
+								<h5>Physical quantity</h5>
+								<div class="collmerparam" data-param="quantity">
+									<button class="collmeroption activecollmeroption" data-value="Density">Density</button>
+									<button class="collmeroption" data-value="Magnetic field">Magnetic field</button>
+								</div>
+							</div>
+							<div id="collmerdisplay">
+								<video controls src="collision_mp4/den_snapshots_new_mstar1_10.0_mstar2_5.0_b_0.25_Nres1_2000000_Nres2_1000000_H1_0.51_H2_0.66_dipole_B1_1.0_3_B2_1.0_3.mp4" id="collmervideo" autoplay loop muted></video>
+							</div>
+						</div>
+					</div>
+
+					<div class="rsclist">
 						<h3>Micro-tidal disruption events of stars</h3>
-						<p>The Sun is an isolated, single star that evolves in a more-or-less predictable fashion.
-							However, many stars in our Universe live in very dense stellar environments like globular clusters which alters their lives.
-							In the cores of such clusters, the density of stars can exceed 10<sup>5</sup> that of the Solar neighbourhood.
-							This significantly increases the chance of dynamical encounters between stars and other objects, such as black holes, in cluster cores.</p>							
-						<p>We explored these encounters between low-mass stars (like the Sun) and stellar-mass black holes, whose masses are 5-100 times that of the Sun <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...685A..45V/abstract" target="_blank">[paper]</a>.
-							To achieve this, we used the 3D hydrodynamics code <a href="https://arepo-code.org/wp-content/userguide/index.html" target="_blank"><code>AREPO</code></a> and  the 1D stellar evolution code <a href="https://docs.mesastar.org/en/release-r24.03.1/" target="_blank"><code>MESA</code></a>.
+						<p>In the centers of dense star clusters, in addition to encounters between two stars, there can be close encounters betwetween a star and a stellar-mass black hole.
+							When these encounters are particularly close, the star can be ripped apart due to the storng gravitational tidal forces of the black hole.
+							Such events are called 'micro' tidal disruption events or &mu;TDEs to distinguish them from TDEs due to supermassive black holes.</p>							
+						<p>Using the 3D hydrodynamics code <a href="https://arepo-code.org/wp-content/userguide/index.html" target="_blank"><code>AREPO</code></a> and the 1D stellar evolution code <a href="https://docs.mesastar.org/en/release-r24.03.1/" target="_blank"><code>MESA</code></a>, we explored these encounters between low-mass main-sequence stars and stellar-mass black holes <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...685A..45V/abstract" target="_blank">[paper]</a>.
 							If the closest approach distance <i>r</i><sub>p</sub> is comparable to the star-black hole system's tidal radius <i>r</i><sub>t</sub>, the star can get tidally disrupted, with two streams of matter escaping the star on either side.
-							An even closer approach can result in the star being completely destroyed. 
-							These are called 'micro' tidal disruption events or &mu;TDEs to distinguish them from TDEs due to supermassive black holes.
 							Studying &mu;TDEs is important because they change the remnant star's future evolution and trajectory, result in accretion of matter on to the black hole, and can thereby affect the dynamics of the host cluster.</p>
-						<p>The following interactive buttons provide animations of &mu;TDEs of large range of input parameters. <i>Note:</i> For <i>m</i><sub>&starf;</sub> = 0.5 M<sub>&odot;</sub> stars, we only ran simulations with  H<sub>c</sub> = 0.70.</p>
+						<p>The following interactive buttons provide animations of &mu;TDEs of large range of input parameters.</p>
+						<p><i>Note:</i> For <i>m</i><sub>&starf;</sub> = 0.5 M<sub>&odot;</sub> stars, we only ran simulations with  H<sub>c</sub> = 0.70.</p>
 						<div id="TDEcontainer">
 							<div id="TDEbuttons">
 								<h5>Black hole mass <i>m</i><sub>BH</sub> [ M<sub>&odot;</sub> ]</h5>
 								<div class="TDEparam" data-param="mbh">
-									<button class="TDEoption activeOption" data-value="10.0">10.0</button>
+									<button class="TDEoption activeTDEoption" data-value="10.0">10.0</button>
 									<button class="TDEoption" data-value="40.0">40.0</button>
 								</div>
 								<h5>Star mass <i>m</i><sub>&starf;</sub> [ M<sub>&odot;</sub> ]</h5>									
 								<div class="TDEparam" data-param="ms">
 									<button class="TDEoption" data-value="0.5">0.5</button>
-									<button class="TDEoption activeOption" data-value="1.0">1.0</button>
+									<button class="TDEoption activeTDEoption" data-value="1.0">1.0</button>
 								</div>
 								<h5>Star core hydrogen fraction H<sub>c</sub></h5>
 								<div class="TDEparam" data-param="Hc">
-									<button class="TDEoption activeOption" data-value="0.70">0.70</button>
+									<button class="TDEoption activeTDEoption" data-value="0.70">0.70</button>
 									<button class="TDEoption" data-value="0.34">0.34</button>
 									<button class="TDEoption" data-value="0.00">0.00</button>
 								</div>
@@ -93,7 +131,7 @@
 									<button class="TDEoption" data-value="0.33">0.33</button>
 									<button class="TDEoption" data-value="0.50">0.50</button>
 									<button class="TDEoption" data-value="0.75">0.75</button>
-									<button class="TDEoption activeOption" data-value="1.00">1.00</button>
+									<button class="TDEoption activeTDEoption" data-value="1.00">1.00</button>
 									<button class="TDEoption" data-value="1.50">1.50</button>
 									<button class="TDEoption" data-value="2.00">2.00</button>
 								</div>
@@ -134,7 +172,7 @@
 								<video controls src="multiples_mp4/3p1_quad_40_10_30_20_20_80_350_0.25_0.15_0.10_dark.mp4" autoplay loop muted></video>
 							</figure>
 						</div>
-						<p>Using machine learning and the <i>N</i>-body code <code>MSTAR</code>, we systematically analyzed the dynamical stability and instability of triples <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.4146V/abstract" target="_blank">[paper 1]</a> and quadruples <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230109930V/abstract" target="_blank">[paper 2]</a>.
+						<p>Using machine learning and the <i>N</i>-body code <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.4131R/abstract" target="_blank"><code>MSTAR</code></a>, we systematically analyzed the dynamical stability and instability of triples <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.516.4146V/abstract" target="_blank">[paper 1]</a> and quadruples <a href="https://ui.adsabs.harvard.edu/abs/2023arXiv230109930V/abstract" target="_blank">[paper 2]</a>.
 							In the case of triples, the 6 parameters which stability depends on include the inner and outer mass rations <i>q</i><sub>in</sub> = </i>m</i><sub>2</sub>/<i>m</i><sub>1</sub> and <i>q</i><sub>out</sub> = <i>m</i><sub>3</sub>/(<i>m</i><sub>1</sub>+<i>m</i><sub>2</sub>), the semimajor axis ratio <i>&alpha;</i> = <i>a</i><sub>in</sub>/<i>a</i><sub>out</sub>, the inner and outer eccentricities <i>e</i><sub>in</sub> and <i>e</i><sub>out</sub>, and the mutual inclination <i>i</i><sub>mut</sub> between the two orbits.
 						 	We did not consider the dependence on other orbital angles.
 							Similarly, for 2+2 and 3+1 quadruples, we looked at the dependencies on 11 equaivalent parameters (three mass ratios, two semimajor axis ratios, three eccentricites and three mutual inclinations).
@@ -161,7 +199,7 @@
 							Massive stars (with masses greater than approximately 10 times that of the Sun) are instrumental to gravitational wave emission as neutron star and black hole are the end products of their stellar evolution.
 							Finally, since massive stars are predominantly found in triples and quadruples, it is critical to study their evolution in detail.
 							Moreover, the intricate dynamics of such systems can bring stars closer together faster, potentially enhancing the number of compact object mergers.</p>
-						<p>To that end, we conducted a population synthesis study, using the code <code>MSE</code>, to estimate the occurance of such mergers in quadruple-star systems <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv211014680V/abstract" target="_blank">[paper]</a>.
+						<p>To that end, we conducted a population synthesis study, using the code <a href="https://ui.adsabs.harvard.edu/abs/2021MNRAS.502.4479H/abstract" target="_blank"><code>MSE</code></a>, to estimate the occurance of such mergers in quadruple-star systems <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv211014680V/abstract" target="_blank">[paper]</a>.
 							Using <code>MSE</code> with realistic intial conditions, we evolved hundreds of thousands of 2+2 and 3+1 quadruple-star systems from birth to death.
 							We found that a small, but significant, fraction of these systems result in the formation of binary compact objects that merge within the age of our Universe.
 							In addition, we found the detectable rates of gravitational wave events from quadruple-star systems to be similar to those from binary-star systems, thereby underscoring their importance.</p>
@@ -235,9 +273,9 @@
 			<section id="activities">
 				<h1 class="heading">Activities</h1>
 				<ul>
-					<li>I enjoy being fit and playing sports, specifically racket sports - badminton and table tennis. Although hiking is not for me, I have come to really enjoy bouldering.</li>
+					<li>I enjoy being fit and playing sports, specifically racquet sports - badminton and table tennis. I have also come to really enjoy bouldering.</li>
 					<li>I significant fraction of my expenditure goes to travelling. I have been to multiple countries in the European Union, and I plan to explore other places in the future. My relocation to Canada hopefully aids in exploring the Americas.</li>
-					<li>I read fantasy fiction series, with <i>Wheel of Time</i> and the <i>Cosmere</i> books being some of my favorites. In the past few years, I have become a victim of doomscrolling and binging TV shows, so my reading has (unfortunately) reduced quite a bit.</li>
+					<li>I read books, with fiction (fantasy and thriller) being my favorite ones. My reading has reduced since high school, but I trying to get back into it again.</li>
 					<li>I used to dabble in (front-end) web design. Websites which I primarily designed include Inquivesta 2016 (IISER Kolkata fest), <a href="https://2018.igem.org/Team:IISER-Kolkata" target="_blank">iGEM 2018</a> and <a href="https://2019.igem.org/Team:IISER_Kolkata" target="_blank">iGEM 2019</a> (International SynBio competition), and <a href="https://muse.iiserkol.ac.in/" target="_blank">Muse</a> (IISER Kolkata magazine).</li>
 					<li>I also play the South Indian classical flute sometimes. During my school and university days, I performed in a few local events as well.</li>
 				</ul>
@@ -255,10 +293,10 @@
 							<a href="https://in.linkedin.com/in/pavan-vynatheya-8a9816173" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 							<a href="https://www.instagram.com/pavanvyn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 						</div>
-						<p><span class="orangetext">email :</span> pavan.vynatheya <i>[at]</i> gmail.com</p>
+						<p><span class="orangetext">email :</span> pavanvyn <i>[at]</i> cita.utoronto.ca</p>
 					</div>
 				</div>
-				<div id="footer"><p><span class="orangetext">&copy; Pavan Vynatheya, September 2024</span></p></div>
+				<div id="footer"><p><span class="orangetext">&copy; Pavan Vynatheya, October 2025</span></p></div>
 			</section>
 		</div>
 	</body>
