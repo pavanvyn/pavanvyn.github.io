@@ -191,21 +191,21 @@ section {
     color: white;
     margin-left: 2rem;
 }
-.rsclist #TDEcontainer, .rsclist #collmercontainer {
+.rsclist #TDEcontainer, .rsclist #collmercontainer, .rsclist #WDTDEcontainer {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
-.rsclist #TDEcontainer #TDEbuttons, .rsclist #collmercontainer #collmerbuttons {
+.rsclist #TDEcontainer #TDEbuttons, .rsclist #collmercontainer #collmerbuttons, .rsclist #WDTDEcontainer #WDTDEbuttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 35vw;
     margin: 0.5rem 0 0.5rem 0;
 }
-.rsclist #TDEcontainer .TDEparam, .rsclist #collmercontainer .collmerparam {
+.rsclist #TDEcontainer .TDEparam, .rsclist #collmercontainer .collmerparam, .rsclist #WDTDEcontainer .WDTDEparam {
     width: 35vw;
     margin: 0.5rem 0 0.5rem 0;
     display: flex;
@@ -213,10 +213,10 @@ section {
     align-items: center;
     justify-content: center;
 }
-.rsclist #TDEcontainer h5, .rsclist #collmercontainer h5 {
+.rsclist #TDEcontainer h5, .rsclist #collmercontainer h5, .rsclist #WDTDEcontainer h5 {
     color: #aaaaaa;
 }
-.rsclist #TDEcontainer .TDEoption, .rsclist #collmercontainer .collmeroption {
+.rsclist #TDEcontainer .TDEoption, .rsclist #collmercontainer .collmeroption, .rsclist #WDTDEcontainer .WDTDEoption {
     width: auto;
     background-color: #222222;
     border: none;
@@ -227,34 +227,35 @@ section {
     padding: 0.5rem;
     cursor: pointer;
 }
-.rsclist #TDEcontainer .TDEoption:hover, .rsclist #collmercontainer .collmeroption:hover {
+.rsclist #TDEcontainer .TDEoption:hover, .rsclist #collmercontainer .collmeroption:hover, .rsclist #WDTDEcontainer .WDTDEoption:hover {
     background-color: orange;
     border: none;
     color: black;
     transition: 0.2s;
     cursor: pointer;
 }
-.rsclist #TDEcontainer .TDEoption.activeTDEoption, .rsclist #collmercontainer .collmeroption.activecollmeroption {
+.rsclist #TDEcontainer .TDEoption.activeTDEoption, .rsclist #collmercontainer .collmeroption.activecollmeroption, .rsclist #WDTDEcontainer .WDTDEoption.activeWDTDEoption {
     background-color: darkorange;
     border: none;
     color: black;
     cursor: pointer;
 }
-.rsclist #TDEcontainer .TDEoption.inactiveTDEoption, .rsclist #collmercontainer .collmeroption.inactivecollmeroption {
+.rsclist #TDEcontainer .TDEoption.inactiveTDEoption, .rsclist #collmercontainer .collmeroption.inactivecollmeroption, .rsclist #WDTDEcontainer .WDTDEoption.inactiveWDTDEoption {
     background-color: #888888;
     border: none;
     color: black;
     cursor: default;
 }
-.rsclist #TDEcontainer #TDEdisplay, .rsclist #collmercontainer #collmerdisplay {
+.rsclist #TDEcontainer #TDEdisplay, .rsclist #collmercontainer #collmerdisplay, .rsclist #WDTDEcontainer #WDTDEdisplay {
     width: 35vw;
-    height: 35vw;
+    height: auto;
     margin: 0.5rem;
 }
-.rsclist #TDEcontainer #TDEdisplay video, .rsclist #collmercontainer #collmerdisplay video {
+.rsclist #TDEcontainer #TDEdisplay video, .rsclist #collmercontainer #collmerdisplay video, .rsclist #WDTDEcontainer #WDTDEdisplay video {
     border: 0.1rem solid #aaaaaa;
     width: 100%;
     height: 100%;
+    background-color: black;
 }
 .rsclist #multcontainer {
     width: 100%;
@@ -529,17 +530,17 @@ section {
         margin: 0.5rem 0 0.5rem 0;
         padding: 0;
     }    
-    .rsclist #TDEcontainer #TDEbuttons, .rsclist #collmercontainer #collmerbuttons {
+    .rsclist #TDEcontainer #TDEbuttons, .rsclist #collmercontainer #collmerbuttons, .rsclist #WDTDEcontainer #WDTDEbuttons {
         width: 80vw;
     }
-    .rsclist #TDEcontainer .TDEparam, .rsclist #collmercontainer .collmerparam {
+    .rsclist #TDEcontainer .TDEparam, .rsclist #collmercontainer .collmerparam, .rsclist #WDTDEcontainer .WDTDEparam {
         width: 80vw;
     }
-    .rsclist #TDEcontainer .TDEoption, .rsclist #collmercontainer .collmeroption {
+    .rsclist #TDEcontainer .TDEoption, .rsclist #collmercontainer .collmeroption, .rsclist #WDTDEcontainer .WDTDEoption {
         width: 20vw;
         background-color: #333333;
     }
-    .rsclist #TDEcontainer #TDEdisplay, .rsclist #collmercontainer #collmerdisplay {
+    .rsclist #TDEcontainer #TDEdisplay, .rsclist #collmercontainer #collmerdisplay, .rsclist #WDTDEcontainer #WDTDEdisplay {
         width: 75vw;
         height: 75vw;
     }

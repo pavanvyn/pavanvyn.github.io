@@ -57,9 +57,44 @@
 				<div id="rscenvelope">
 
 					<div class="rsclist">
+						<h3>Tidal disruption events of white dwarfs</h3>
+						<p>Dense stellar environments like globular clusters host wide population of stars and compact objects like white dwarfs, neutron stars and black holes.
+							Such clusters may also host intermediate-mass black holes, those with masses ranging from 10<sup>2</sup> M<sub>&odot;</sub> to 10<sup>5</sup> M<sub>&odot;</sub>, at their centers.
+							Thus, there is a potential for a very close encounter between a white dwarf and the intermediate-mass black hole, during which the former can be completely ripped apart due to the strong tidal forces of the latter.
+							If there is significant tidal compression at the closest approach distance <i>r</i><sub>p</sub>, white dwarf tidal disruption events (WD TDEs) may further result in runaway nuclear fusion owing to the extremely high densities and temperatures achieved.
+							Depending on the distance of approach, these extreme encounters result in a wide array of highly asymmetric thermonuclear supernovae.</p>
+						<p>We simulated WD TDEs using 3D hydrodynamics code <a href="https://arepo-code.org/wp-content/userguide/index.html" target="_blank"><code>AREPO</code></a> with an on-the-fly nuclear reaction network to model the nuclear fusion reactions <a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260120133V/abstract" target="_blank">[paper]</a>.
+							Subsequently, we performed radiative transfer calculations using the 1D and 2D radiative transfer codes <a href="https://sites.pitt.edu/~hillier/web/CMFGEN.html" target="_blank"><code>CMFGEN</code></a> and <a href="" target="_blank"><code>LONGPOL</code></a>, respectively.
+							We found that closer encounters (<i>r</i><sub>p</sub> &le; 0.18 <i>r</i><sub>t</sub>, the WD tidal radius) show significant nuclear burning, with the closest encounters converting more than 80% of the WD mass to nickel-56.
+							The light curves resemble thermonuclear supernovae, but the spectra vary significantly depending on the encounter distance.
+							Closer encounters show stronger spectral lines of iron-group elements (e.g., iron, cobalt) while wider encounters show stronger lines of intermediate-mass elements (e.g., oxygen, silicon, calcium).
+							The luminosities and spectra depend strongly on viewing angle, with large blue- and red-shifting of lines observed while viewing towards and away from the ejecta, respectively.</p>
+						<p>The following interactive buttons provide animations of WD TDEs for different impact parameters.</p>
+						<p><i>Note:</i> We fix the (carbon-oxygen) white dwarf and intermediate-mass black hole masses at <i>m</i><sub>WD</sub> = 0.6 M<sub>&odot;</sub> and <i>m</i><sub>BH</sub> = 500 M<sub>&odot;</sub>, respectively.</p>
+						<div id="WDTDEcontainer">
+							<div id="WDTDEbuttons">
+								<h5>Scaled impact parameter <i>b</i> = <i>r</i><sub>p</sub>/<i>r</i><sub>t</sub></h5>
+								<div class="WDTDEparam" data-param="bWD">
+									<button class="WDTDEoption" data-value="0.10">0.10</button>
+									<button class="WDTDEoption" data-value="0.12">0.12</button>
+									<button class="WDTDEoption activeWDTDEoption" data-value="0.15">0.15</button>
+									<button class="WDTDEoption" data-value="0.16">0.16</button>
+									<button class="WDTDEoption" data-value="0.17">0.17</button>
+									<button class="WDTDEoption" data-value="0.18">0.18</button>
+									<button class="WDTDEoption" data-value="0.19">0.19</button>
+									<button class="WDTDEoption" data-value="0.20">0.20</button>
+								</div>
+							</div>
+							<div id="WDTDEdisplay">
+								<video controls src="WDTDE_mp4/snapshots_mbh_500_mwd_0.6_b_0.15_Nres_6000000_pot_0_nuc_1.mp4" id="WDTDEvideo" autoplay loop muted></video>
+							</div>
+						</div>
+					</div>
+
+					<div class="rsclist">
 						<h3>Collisions and mergers of stars</h3>
 						<p>Many stars in our Universe, unlike our Sun, live in very dense stellar environments like star clusters which alters their lives.
-							This significantly increases the chance of dynamical encounters between stars, leadinf to collisions.
+							This significantly increases the chance of dynamical encounters between stars, leading to collisions.
 							Additionally, stars in binary systems can also merge over the course of their evolution due to radial expansion, tides and orbit changes.</p>								
 						<p>Studying collisions and mergers is important because they are potential formation channels for blue straggler stars and highly magnetized stars.
 							We explored the physical differences between collision and merger products of massive main-sequence stars <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv251013736V/abstract" target="_blank">[paper]</a>.
@@ -99,8 +134,8 @@
 
 					<div class="rsclist">
 						<h3>Micro-tidal disruption events of stars</h3>
-						<p>In the centers of dense star clusters, in addition to encounters between two stars, there can be close encounters betwetween a star and a stellar-mass black hole.
-							When these encounters are particularly close, the star can be ripped apart due to the storng gravitational tidal forces of the black hole.
+						<p>In the centers of dense star clusters, in addition to encounters between two stars, there can be close encounters between a star and a stellar-mass black hole.
+							When these encounters are particularly close, the star can be ripped apart due to the strong gravitational tidal forces of the black hole.
 							Such events are called 'micro' tidal disruption events or &mu;TDEs to distinguish them from TDEs due to supermassive black holes.</p>							
 						<p>Using the 3D hydrodynamics code <a href="https://arepo-code.org/wp-content/userguide/index.html" target="_blank"><code>AREPO</code></a> and the 1D stellar evolution code <a href="https://docs.mesastar.org/en/release-r24.03.1/" target="_blank"><code>MESA</code></a>, we explored these encounters between low-mass main-sequence stars and stellar-mass black holes <a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...685A..45V/abstract" target="_blank">[paper]</a>.
 							If the closest approach distance <i>r</i><sub>p</sub> is comparable to the star-black hole system's tidal radius <i>r</i><sub>t</sub>, the star can get tidally disrupted, with two streams of matter escaping the star on either side.
@@ -296,7 +331,7 @@
 						<p><span class="orangetext">email :</span> pavanvyn <i>[at]</i> cita.utoronto.ca</p>
 					</div>
 				</div>
-				<div id="footer"><p><span class="orangetext">&copy; Pavan Vynatheya, October 2025</span></p></div>
+				<div id="footer"><p><span class="orangetext">&copy; Pavan Vynatheya, March 2026</span></p></div>
 			</section>
 		</div>
 	</body>

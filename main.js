@@ -47,6 +47,23 @@ $(window).on("load", function() {
         });
     });
 
+    // WD TDE animation options
+    let WDTDEparams = { bWD: "0.15" };
+    function WDTDEAdjustOptions() {
+        // nothing to adjust
+    }
+    $(".WDTDEoption").on("click", function() {
+        if (!$(this).hasClass("inactiveWDTDEoption")) {
+            param = $(this).closest(".WDTDEparam").data("param");
+            value = $(this).data("value");
+            TDEparams[param] = value;
+            $(this).siblings().removeClass("activeWDTDEoption");
+            $(this).addClass("activeWDTDEoption");
+            $("#WDTDEvideo").attr("src", "WDTDE_mp4/snapshots_mbh_500_mwd_0.6_b_"+WDTDEparams.bWD+"_Nres_6000000_pot_0_nuc_1.mp4");
+            WDTDEAdjustOptions();
+        }
+    });
+
     // collision and merger animation options
     let collmerparams = { type: "Collision: b = 0.25", quantity: "Density", ms1ms2: "10 + 5", b: "0.25" };  
     let ms1ms2List = ["10 + 8", "10 + 7", "10 + 5", "8 + 7", "8 + 5", "7 + 5"];
