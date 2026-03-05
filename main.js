@@ -56,7 +56,7 @@ $(window).on("load", function() {
         if (!$(this).hasClass("inactiveWDTDEoption")) {
             param = $(this).closest(".WDTDEparam").data("param");
             value = $(this).data("value");
-            TDEparams[param] = value;
+            WDTDEparams[param] = value;
             $(this).siblings().removeClass("activeWDTDEoption");
             $(this).addClass("activeWDTDEoption");
             $("#WDTDEvideo").attr("src", "WDTDE_mp4/snapshots_mbh_500_mwd_0.6_b_"+WDTDEparams.bWD+"_Nres_6000000_pot_0_nuc_1.mp4");
