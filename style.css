@@ -332,6 +332,11 @@ section {
 .ednlist h5 {    
     color: #333333;
 }
+.ednlist p {    
+    font-family: Noto Sans Display;
+    color: black;
+    text-align: center;
+}
 
 /*tools*/
 #tools {
@@ -367,6 +372,7 @@ section {
 .tlslist p {    
     font-family: Noto Sans Display;
     color: black;
+    text-align: center;
 }
 
 /*activities*/
