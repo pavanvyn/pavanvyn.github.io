@@ -2,6 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto Sans Display');
 @import url('https://fonts.googleapis.com/css2?family=Noto Sans Mono');
 
+:root {
+    color-scheme: light dark;
+    --bg0-color: light-dark(#ffffff, #000000);
+    --bg1-color: light-dark(#eeeeee, #111111);
+    --bg2-color: light-dark(#dddddd, #222222);
+    --bg3-color: light-dark(#cccccc, #333333);
+    --accent-color: light-dark(SeaGreen, Plum);
+    --accenthover-color: light-dark(MediumSeaGreen, Orchid);
+    --text0-color: light-dark(#000000, #ffffff);
+    --text1-color: light-dark(#111111, #eeeeee);
+    --text2-color: light-dark(#222222, #dddddd);
+    --text3-color: light-dark(#333333, #cccccc);
+}
+:root.lightroot {
+    color-scheme: light;
+}
+:root.darkroot {
+    color-scheme: dark;
+}
+
 /*body*/
 * {
     margin: 0;
@@ -18,17 +38,14 @@ body {
     overflow-x: hidden;
 }
 
-span.orangetext {
-    color: darkorange;
-    font-weight: bold;
-}
-span.graytext {
-    color: #aaaaaa;
+span.accenttext {
+    color: var(--accent-color);
     font-weight: bold;
 }
 h1.heading {
     font-family: Noto Sans Display;
     font-size: 2.5rem;
+    color: var(--text2-color);
     font-variant: small-caps;
     margin: 1rem 0 1rem 0;
     text-align: center;
@@ -36,23 +53,26 @@ h1.heading {
 h3 {
     font-family: Noto Sans Display;
     font-size: 1.5rem;
+    color: var(--text2-color);
     margin: 0.75rem 0 0.75rem 0;
     text-align: center;
 }
 h5 {    
     font-family: Noto Sans Display;
     font-size: 1.1rem;
+    color: var(--text3-color);
     margin: 0.5rem 0 0.5rem 0;
     text-align: center;
 }
 p, li {
     font-family: Noto Sans Display;
     font-size: 1rem;
+    color: var(--text3-color);
     margin: 0.5rem 0 0.5rem 0;
     text-align: justify;
 }
 p a, li a {
-    color: darkorange;
+    color: var(--accent-color);
 }
 code {
     font-family: Noto Sans Mono;
@@ -62,6 +82,7 @@ figcaption {
     font-family: Noto Sans Display;
     font-size: 0.9rem;
     font-style: italic;
+    color: var(--text2-color);
     margin-top: 0.5rem;
     text-align: center;
 }
@@ -70,7 +91,7 @@ figcaption {
 #menubar {  
     width: 100vw;
     height: 8vh;
-    background-color: black;
+    background-color: var(--accent-color);
     display: flex;
     align-items: center; 
     justify-content: flex-start;  
@@ -96,22 +117,46 @@ figcaption {
     align-items: center;
     justify-content: center;
     height: 100%;
-    font-family: Noto Sans Display;
     font-size: 1.2rem;
     margin: 0;
-    padding: 1rem; 
-    color: white;
-    background-color: black;
+    padding: 1rem;
+    color: var(--bg1-color);
+    background-color: var(--accent-color);
     cursor: pointer;
     transition: 0.2s linear;     
 }
 #menubar ul li.activeMenu {
-    color: black;
-    background-color: darkorange;
+    color: var(--accent-color);
+    background-color: var(--bg1-color);
 }
 #menubar ul li:hover {
-    color: black;
-    background-color: orange;
+    color: var(--accent-color);
+    background-color: var(--bg3-color);
+}
+#menubar #themeswitch {
+    display: flex;
+    position: fixed;
+    cursor: pointer;
+    top: 2vh;
+    right: 8vh;
+    width: 7vh;
+    height: 4vh;
+    background-color: var(--bg1-color);
+    border-radius: 4vh;
+    transition: 0.2s;
+}
+#themeswitch #slider {
+    position: absolute;
+    height: 3.2vh;
+    width: 3.2vh;
+    left: 0.4vh;
+    top: 0.4vh;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transition: 0.2s;
+}
+#themeswitch .moveslider#slider {
+    left: 3.4vh;
 }
 
 #container {
@@ -135,10 +180,7 @@ section {
 
 /*aboutMe*/
 #aboutMe {
-    background-color: whitesmoke;
-}
-#aboutMe h1.heading {
-    color: #333333;
+    background-color: var(--bg3-color);
 }
 #self {
     width: 100%;
@@ -156,13 +198,13 @@ section {
     width: 45vw;
     height: auto;
 }
+#description p {
+    font-family: Noto Sans Display;
+}
 
 /*research*/
 #research {
-    background-color: #222222;
-}
-#research h1.heading {
-    color: darkorange;
+    background-color: var(--bg2-color);
 }
 #rscenvelope {
     width: 100vw;
@@ -177,18 +219,9 @@ section {
     flex-direction: column;
     margin: 1rem;
     padding: 1rem 2rem 1rem 2rem;
-    background-color: #333333;
-}
-.rsclist h3 {
-    color: #dddddd;
-}
-.rsclist p {
-    font-family: Noto Sans Display;
-    color: white;
+    background-color: var(--bg3-color);
 }
 .rsclist ul li {
-    font-family: Noto Sans Display;
-    color: white;
     margin-left: 2rem;
 }
 .rsclist #TDEcontainer, .rsclist #collmercontainer, .rsclist #WDTDEcontainer {
@@ -213,37 +246,34 @@ section {
     align-items: center;
     justify-content: center;
 }
-.rsclist #TDEcontainer h5, .rsclist #collmercontainer h5, .rsclist #WDTDEcontainer h5 {
-    color: #aaaaaa;
-}
 .rsclist #TDEcontainer .TDEoption, .rsclist #collmercontainer .collmeroption, .rsclist #WDTDEcontainer .WDTDEoption {
     width: auto;
-    background-color: #222222;
+    background-color: var(--bg2-color);
     border: none;
     font-family: Noto Sans Display;
     font-size: 1rem;
-    color: white;
+    color: var(--text2-color);
     margin: 0.3rem;
     padding: 0.5rem;
     cursor: pointer;
 }
 .rsclist #TDEcontainer .TDEoption:hover, .rsclist #collmercontainer .collmeroption:hover, .rsclist #WDTDEcontainer .WDTDEoption:hover {
-    background-color: orange;
+    background-color: var(--accenthover-color);
     border: none;
-    color: black;
+    color: var(--bg1-color);
     transition: 0.2s;
     cursor: pointer;
 }
 .rsclist #TDEcontainer .TDEoption.activeTDEoption, .rsclist #collmercontainer .collmeroption.activecollmeroption, .rsclist #WDTDEcontainer .WDTDEoption.activeWDTDEoption {
-    background-color: darkorange;
+    background-color: var(--accent-color);
     border: none;
-    color: black;
+    color: var(--bg1-color);
     cursor: pointer;
 }
 .rsclist #TDEcontainer .TDEoption.inactiveTDEoption, .rsclist #collmercontainer .collmeroption.inactivecollmeroption, .rsclist #WDTDEcontainer .WDTDEoption.inactiveWDTDEoption {
-    background-color: #888888;
+    background-color: gray;
     border: none;
-    color: black;
+    color: var(--text2-color);
     cursor: default;
 }
 .rsclist #TDEcontainer #TDEdisplay, .rsclist #collmercontainer #collmerdisplay, .rsclist #WDTDEcontainer #WDTDEdisplay {
@@ -252,10 +282,10 @@ section {
     margin: 0.5rem;
 }
 .rsclist #TDEcontainer #TDEdisplay video, .rsclist #collmercontainer #collmerdisplay video, .rsclist #WDTDEcontainer #WDTDEdisplay video {
-    border: 0.1rem solid #aaaaaa;
+    border: 0.1rem solid var(--text2-color);
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--bg1-color);
 }
 .rsclist #multcontainer {
     width: 100%;
@@ -268,13 +298,11 @@ section {
     width: 35vw;
     height: auto;
 }
-.rsclist #multcontainer .multpanel figcaption {
-    color: #dddddd;
-}
 .rsclist #multcontainer .multpanel video {
-    border: 0.1rem solid #aaaaaa;
+    border: 0.1rem solid var(--text2-color);
     width: 100%;
     height: auto;
+    background-color: var(--bg1-color);
     margin-top: 0.5rem;
 }
 .rsclist .scrollcontainer {
@@ -288,9 +316,6 @@ section {
     height: auto;
     margin: 0.5rem auto;
 }
-.rsclist .scrollcontainer .imgshow figcaption {
-    color: #dddddd;
-}
 .rsclist .scrollcontainer .imgshow img {
     border: 0.1rem solid #aaaaaa;
     width: 100%;
@@ -301,10 +326,7 @@ section {
 
 /*education*/
 #education {
-    background-color: orange;
-}
-#education h1.heading, li {
-    color: black;
+    background-color: var(--bg3-color);
 }
 #ednenvelope {
     width: 100vw;
@@ -326,24 +348,16 @@ section {
     height: 6vw;
     margin: 0.5rem;
 }
-.ednlist h3 {
-    color: #333333;
+.ednlist img.ednicon.invert {
+    filter: invert(90%);
 }
-.ednlist h5 {    
-    color: #333333;
-}
-.ednlist p {    
-    font-family: Noto Sans Display;
-    color: black;
+.ednlist p {
     text-align: center;
 }
 
 /*tools*/
 #tools {
-    background-color: whitesmoke;
-}
-#tools h1.heading {
-    color: #333333;
+    background-color: var(--bg2-color);
 }
 #tlsenvelope {
     width: 100vw;
@@ -363,35 +377,29 @@ section {
 .tlslist img.tlsicon {
     width: 6vw;
     height: 6vw;
-    margin: 0.5rem;
+    margin: 0.5rem;    
+}
+.tlslist img.tlsicon.invert {
+    filter: invert(90%);
 }
 .tlslist h3 {
     text-align: center;
-    color: #333333;
 }
-.tlslist p {    
-    font-family: Noto Sans Display;
-    color: black;
+.tlslist p {
     text-align: center;
 }
 
 /*activities*/
 #activities {
-    background-color: orange;
-}
-#activities h1.heading {
-    color: black;
+    background-color: var(--bg3-color);
 }
 #activities ul li {
     margin-left: 2rem;
 }
-#activities ul li a {
-    color: #333333;
-}
 
 /*contact*/
 #contact {
-    background-color: #222222;
+    background-color: var(--accent-color);
     padding-bottom: 1vh;
 }
 #conenvelope {
@@ -402,7 +410,7 @@ section {
     align-items: center;
 }
 #contact p {
-    color: #dddddd;
+    color: var(--bg2-color);
     text-align: center;
 }
 #address {
@@ -421,12 +429,12 @@ section {
 #social i.fa-brands {
     font-size: 2.5rem;
     margin: 0.7rem;
-    color: #dddddd;
+    color: var(--bg3-color);
     opacity: 0.7;
     cursor: pointer;
 }
 #social i.fa-brands:hover {
-    color: white;
+    color: var(--bg1-color);
 }
 #footer {
     display: flex;
@@ -439,7 +447,6 @@ section {
 #footer p {
     margin: 0;
     font-size: 0.8rem;
-    color: white;
 }
 
 /*mobile mode*/
@@ -462,10 +469,10 @@ section {
         top: -100vh;
     }
     #menubar #closeicon {
+        display: flex;
         position: fixed;
         top: 2vh;
         left: 2vh;
-        display: flex;
         height: 3.5vh;
         width: 3.7vh;
         cursor: pointer;        
@@ -478,23 +485,26 @@ section {
         margin: 0.3vh 0 0.3vh 0;
         width: 3.7vh;
         height: 0.3vh;
-        background-color: black;
+        background-color: var(--text1-color);
         transition: 0.2s linear;
     }
     .change #bar1 {
-        background-color: white;
+        background-color: var(--bg1-color);
         margin: 0;
         transform: rotate(-45deg) translateY(0.35vh);
     }
     .change #bar2 {
-        background-color: white;
+        background-color: var(--bg1-color);;
         margin: 0;
         opacity: 0;
     }
     .change #bar3 {
-        background-color: white;
+        background-color: var(--bg1-color);;
         margin: 0;
         transform: rotate(45deg) translateY(-0.35vh);
+    }
+    #menubar #themeswitch {
+        right: 2vh;
     }
     #menubar ul {  
         width: 100vw;
@@ -532,7 +542,7 @@ section {
     .rsclist {
         width: 80vw;
         height: auto;
-        background-color: #222222;
+        background-color: var(--bg2-color);
         margin: 0.5rem 0 0.5rem 0;
         padding: 0;
     }    
@@ -544,7 +554,7 @@ section {
     }
     .rsclist #TDEcontainer .TDEoption, .rsclist #collmercontainer .collmeroption, .rsclist #WDTDEcontainer .WDTDEoption {
         width: 20vw;
-        background-color: #333333;
+        background-color: var(--bg3-color);
     }
     .rsclist #TDEcontainer #TDEdisplay, .rsclist #collmercontainer #collmerdisplay, .rsclist #WDTDEcontainer #WDTDEdisplay {
         width: 75vw;

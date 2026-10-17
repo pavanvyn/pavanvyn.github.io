@@ -1,3 +1,4 @@
+// $(document).ready(function() {
 $(window).on("load", function() {
     // navbar close icon toggle
     $("#closeicon").on("click", function(){
@@ -20,6 +21,40 @@ $(window).on("load", function() {
         }
         var sectionPos = $("#"+section).offset().top;
         $("body, html").animate({scrollTop: sectionPos - menubarHeight}, 1000, "swing");
+    });
+
+    // light and dark mode toggle effect
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        $("#slider").addClass("moveslider");
+        $('.ednicon').removeClass('invert');
+        $('.tlsicon').removeClass('invert');
+        $('html').addClass('lightroot');
+        $('html').removeClass('darkroot');
+        localStorage.setItem('theme', 'light');
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        $("#slider").removeClass("moveslider");
+        $('.ednicon').addClass('invert');
+        $('.tlsicon').addClass('invert');
+        $('html').addClass('darkroot');
+        $('html').removeClass('lightroot');
+        localStorage.setItem('theme', 'dark');
+    }
+    $("#themeswitch").on('click', function() {
+        if ($('#slider').hasClass('moveslider')) {
+            $("#slider").removeClass("moveslider");
+            $('.ednicon').addClass('invert');
+            $('.tlsicon').addClass('invert');
+            $('html').addClass('darkroot');
+            $('html').removeClass('lightroot');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            $("#slider").addClass("moveslider");
+            $('.ednicon').removeClass('invert');
+            $('.tlsicon').removeClass('invert');
+            $('html').addClass('lightroot');
+            $('html').removeClass('darkroot');
+            localStorage.setItem('theme', 'light');
+        }
     });
 
     // window scroll effect

@@ -20,9 +20,12 @@
 	<body>
 		<nav id="menubar">
 			<div id="closeicon">
-				<span class="orangetext" id="bar1"></span>
-				<span class="orangetext" id="bar2"></span>
-				<span class="orangetext" id="bar3"></span>
+				<span id="bar1"></span>
+				<span id="bar2"></span>
+				<span id="bar3"></span>
+			</div>
+			<div id="themeswitch">
+				<span id="slider"></span>
 			</div>
 			<ul>
 				<li id="aboutMeMenu" class="activeMenu" data-section="aboutMe">About Me</li>
@@ -35,7 +38,7 @@
 		</nav>
 		<div id="container">			
 			<section id="aboutMe">
-				<h1 class="heading">Pavan <span class="orangetext">Vynatheya</span></h1>
+				<h1 class="heading"><span class="accenttext">Pavan</span> Vynatheya</h1>
 				<div id="self">
 					<img id="Pavan" src="Pavan.png"></img>
 					<div id="description">
@@ -53,7 +56,7 @@
 			</section>
 
 			<section id="research">
-				<h1 class="heading">Research</h1>
+				<h1 class="heading"><span class="accenttext">Research</span></h1>
 				<div id="rscenvelope">
 
 					<div class="rsclist">
@@ -254,28 +257,28 @@
 			</section>
 
 			<section id="education">
-				<h1 class="heading">Education</h1>
+				<h1 class="heading"><span class="accenttext">Education</span></h1>
 				<div id="ednenvelope">
 					<div class="ednlist">
-						<img class="ednicon" src="icons/graduation.png"/>
+						<img class="ednicon invert" src="icons/graduation.png"/>
 						<h3>PhD in Astronomy</h3>
 						<h5>Max Planck Institute for Astrophysics<br/>&<br/>Ludwig Maximilian University of Munich</h5>
 						<p>Garching/Munich, Germany<br/>(2020 - 2024)</p>
 					</div>			
 					<div class="ednlist">
-						<img class="ednicon" src="icons/university-building.png"/>
+						<img class="ednicon invert" src="icons/university-building.png"/>
 						<h3>BS-MS in Physics</h3>
 						<h5>Indian Institute of Science Education and Research, Kolkata</h5>
 						<p>Mohanpur, India<br/>(2015 - 2020)</p>
 					</div>					
 					<div class="ednlist">
-						<img class="ednicon" src="icons/school.png"/>
+						<img class="ednicon invert" src="icons/school.png"/>
 						<h3>Classes 11-12</h3>
 						<h5>KLE Independent PU College</h5>
 						<p>Bengaluru, India<br/>(2013 - 2015)</p>
 					</div>
 					<div class="ednlist">
-						<img class="ednicon" src="icons/school.png"/>
+						<img class="ednicon invert" src="icons/school.png"/>
 						<h3>Classes 1-10</h3>
 						<h5>Sri Vani Public School</h5>
 						<p>Bengaluru, India<br/>(2003 - 2013)</p>
@@ -284,25 +287,25 @@
 			</section>
 
 			<section id="tools">
-				<h1 class="heading">Tools</h1>
+				<h1 class="heading"><span class="accenttext">Tools</span></h1>
 				<div id="tlsenvelope">
 					<div class="tlslist">
-						<img class="tlsicon" src="icons/flow.png"/>
+						<img class="tlsicon invert" src="icons/flow.png"/>
 						<h3>Hydrodynamics</h3>
 						<p>Moving-mesh code <code>AREPO</code></p>
 					</div>
 					<div class="tlslist">
-						<img class="tlsicon" src="icons/gravity.png"/>
+						<img class="tlsicon invert" src="icons/gravity.png"/>
 						<h3><i>N</i>-body dynamics</h3>
 						<p><i>N</i>-body integrator <code>MSTAR</code></p>
 					</div>
 					<div class="tlslist">
-						<img class="tlsicon" src="icons/deep-learning.png"/>
+						<img class="tlsicon invert" src="icons/deep-learning.png"/>
 						<h3>Machine learning</h3>
 						<p><code>python3</code>-based <code>scikit-learn</code>, <code>pytorch</code></p>
 					</div>
 					<div class="tlslist">
-						<img class="tlsicon" src="icons/statistics.png"/>
+						<img class="tlsicon invert" src="icons/statistics.png"/>
 						<h3>Population synthesis</h3>
 						<p>PopSyn codes <code>SSE</code>, <code>BSE</code>, <code>MSE</code></p>
 					</div>
@@ -310,7 +313,7 @@
 			</section>
 
 			<section id="activities">
-				<h1 class="heading">Activities</h1>
+				<h1 class="heading"><span class="accenttext">Activities</span></h1>
 				<ul>
 					<li>I enjoy being fit and playing sports, specifically racquet sports - badminton and table tennis. I have also come to really enjoy bouldering.</li>
 					<li>I significant fraction of my expenditure goes to travelling. I have been to multiple countries in the European Union, and I plan to explore other places in the future. My relocation to Canada hopefully aids in exploring the Americas.</li>
@@ -323,8 +326,8 @@
 			<section id="contact">
 				<div id="conenvelope">
 					<div id="address">
-						<p><span class="orangetext">Current city :</span> Toronto, Canada<br/>
-							<span class="orangetext">Institute :</span> Canadian Institute for Theoretical Astrophysics,<br/>University of Toronto</p>
+						<p><b>Current city :</b> Toronto, Canada<br/>
+							<b>Institute :</b> Canadian Institute for Theoretical Astrophysics,<br/>University of Toronto</p>
 					</div>
 					<div id="links">
 						<div id="social">
@@ -332,10 +335,10 @@
 							<a href="https://in.linkedin.com/in/pavan-vynatheya" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 							<a href="https://www.instagram.com/pavanvyn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 						</div>
-						<p><span class="orangetext">email :</span> pavanvyn <i>[at]</i> cita.utoronto.ca</p>
+						<p><span class="accenttext">email :</span> pavanvyn <i>[at]</i> cita.utoronto.ca</p>
 					</div>
 				</div>
-				<div id="footer"><p><span class="orangetext">&copy; Pavan Vynatheya, March 2026</span></p></div>
+				<div id="footer"><p><b>&copy; Pavan Vynatheya, October 2026</b></p></div>
 			</section>
 		</div>
 	</body>
